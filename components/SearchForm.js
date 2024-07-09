@@ -10,7 +10,9 @@ const SearchForm = () => {
 
 
   return (
+   
     <div className="bg-amber-200 shadow-2xl p-10 rounded-lg max-w-6xl mx-auto mt-4 mb-10 absolute bottom-0 left-0 right-0">
+      
       {/* Title Section */}
       <h2 className=" text-4xl font-semibold mb-6 text-teal-800 text-center  ">
         Where to  next  ?
