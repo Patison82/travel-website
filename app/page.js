@@ -1,5 +1,5 @@
 
-import SearchForm from "@/app/components/SearchForm.js";
+import SearchForm from "@/components/SearchForm";
 
 
 

@@ -3,9 +3,6 @@
 import { useState } from "react";
 
 
-
-
-
 const SearchForm = () => {
   const [tripType, setTripType] = useState("return"); // State for trip type (return or one-way)
   const [addNearbyFrom, setAddNearbyFrom] = useState(false); // State for "Add nearby airports" checkbox for departure city
