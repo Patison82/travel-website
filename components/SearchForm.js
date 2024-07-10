@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { LiaPlaneDepartureSolid } from "react-icons/lia";
+import { LiaPlaneArrivalSolid } from "react-icons/lia";
+
 
 const SearchForm = () => {
   const [tripType, setTripType] = useState("return"); // State for trip type (return or one-way)
@@ -9,15 +12,26 @@ const SearchForm = () => {
   const [directFlightsOnly, setDirectFlightsOnly] = useState(false);
 
   return (
-    <div className="bg-amber-200 shadow-2xl p-6 rounded-lg max-w-6xl mx-auto mt-8 sm:mb-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0">
+    <div className="bg-gradient-to-tr from-tertiary to-secondaryAccent   p-10 rounded-badge    max-w-6xl mx-auto mt-8 sm:mb-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0">
+
+   
+
       {/* Title Section */}
-      <h2 className=" text-4xl font-semibold mb-6 text-teal-800 text-center sm:text-4xl ">
+      <h2 className=" text-4xl font-semibold mb-6 text-primary text-center sm:text-4xl ">
+
+      {/* Plane Icon */}
+      <div className="absolute top-8  left-1/4 text-primary">
+        <LiaPlaneDepartureSolid size="1em" />
+      </div>
         Where to next ?
+        <div className="absolute top-8  right-1/4 text-primary">
+        <LiaPlaneArrivalSolid size="1em" />
+      </div>
       </h2>
 
       {/* Trip Type Section */}
       <div className="flex flex-col mb-8 sm:space-x-10 sm:flex-row sm:space-y-0 ">
-        <label className="inline-flex  items-center text-gray-800">
+        <label className="inline-flex  items-center text-black">
           <input
             type="radio"
             value="return"
@@ -28,7 +42,7 @@ const SearchForm = () => {
 
           <span className="ml-2 text-">RETURN</span>
         </label>
-        <label className="inline-flex items-center text-gray-800">
+        <label className="inline-flex items-center text-black">
           <input
             type="radio"
             value="oneway"
@@ -150,13 +164,15 @@ const SearchForm = () => {
       </div>
 
       {/*  Search Button Section */}
-      <div className="flex justify-end mt-6">
-        <button className="px-6 py-3 bg-teal-500 text-amber-50 font-semibold rounded-lg  hover:bg-emerald-400 transition duration-300 shadow-lg ">
+      <div className="flex justify-end mt-6 relative">
+        <button className="px-6 py-3 text-l bg-primary text-  font-semibold rounded-lg  hover:bg-tertiary transition duration-300 shadow-lg ">
           Search Flights
         </button>
+
+        
       </div>
     </div>
   );
-};
+}; 
 
 export default SearchForm;
