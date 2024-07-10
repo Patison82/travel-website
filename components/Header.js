@@ -3,6 +3,8 @@ import Link from "next/link";
 import { FaUserCircle } from "react-icons/fa";
 
 
+
+
 const Header = () => {
   return (
     <header>
@@ -16,9 +18,7 @@ const Header = () => {
               <li className=" btn btn-ghost text-[1rem] hidden sm:flex ">about</li>
               <li className="btn btn-ghost text-[1rem]">flights</li>
               <li className="btn btn-ghost text-[1rem]">hotels</li>
-
               <li className="hidden btn btn-ghost text-[1rem]  sm:flex ">contact</li>
-
             </ul>
           
 
