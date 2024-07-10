@@ -1,33 +1,46 @@
 import Link from "next/link";
-
+import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
-
-
-
 
 const Header = () => {
   return (
-    <header>
-      <nav>
-        <div className="navbar bg-base-100">
+    <header className=" bg-transparet fixed top-0 right-0 left-0 z-40">
+      <nav className="navbar  w-[90%] my-0 mx-auto">
+        <div className="navbar ">
           <div className="flex-1">
-            <a className="btn btn-ghost text-xl">Logo</a>
+            {/* <a className="btn btn-ghost text-xl">Logo</a> */}
+            <Link href={"/"}>
+              <Image
+                className="rounded"
+                src="/pavasa.png"
+                alt="Logo"
+                width={75}
+                height={50}
+              />
+            </Link>
           </div>
-          <div>
-            <ul className="capitalize">
-              <li className=" btn btn-ghost text-[1rem]  ">about</li>
-              <li className="btn btn-ghost text-[1rem]">flights</li>
-              <li className="btn btn-ghost text-[1rem]">hotels</li>
-              <li className="hidden btn btn-ghost text-[1rem] sm:inline ">contact</li>
-            </ul>
-          </div>
+
+          <ul className="capitalize  ">
+            <li className=" btn btn-ghost text-[1rem] hidden hover:bg-primary sm:flex ">
+              about
+            </li>
+            <li className="btn btn-ghost text-[1rem] hover:bg-primary">
+              flights
+            </li>
+            <li className="btn btn-ghost text-[1rem] hover:bg-primary">
+              hotels
+            </li>
+            <li className="hidden btn btn-ghost text-[1rem]  sm:flex hover:bg-primary">
+              contact
+            </li>
+          </ul>
 
           <div className="flex-none">
             <div className="dropdown dropdown-end">
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost btn-circle"
+                className="btn btn-ghost btn-circle hover:bg-primary"
               >
                 <div className="indicator">
                   <svg
@@ -55,7 +68,7 @@ const Header = () => {
                   <span className="text-lg font-bold">8 Items</span>
                   <span className="text-info">Subtotal: $999</span>
                   <div className="card-actions">
-                    <button className="btn btn-primary btn-block">
+                    <button className="btn bg-primary btn-block">
                       View cart
                     </button>
                   </div>
@@ -66,7 +79,7 @@ const Header = () => {
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost btn-circle avatar"
+                className="btn btn-ghost btn-circle avatar hover:bg-primary"
               >
                 <div className="w-10 rounded-full">
                   <FaUserCircle
@@ -80,13 +93,15 @@ const Header = () => {
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
                 <li>
-                  <a className="justify-between">
+                  <a className="justify-between hover:bg-primary">
                     Register
                     <span className="badge">New</span>
                   </a>
                 </li>
                 <li>
-                  <a>Login</a>
+                  <a href="/login" className="justify-between hover:bg-primary">
+                    Login
+                  </a>
                 </li>
               </ul>
             </div>

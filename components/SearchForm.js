@@ -9,12 +9,12 @@ const SearchForm = () => {
   const [tripType, setTripType] = useState("return"); // State for trip type (return or one-way)
   const [addNearbyFrom, setAddNearbyFrom] = useState(false); // State for "Add nearby airports" checkbox for departure city
   const [addNearbyTo, setAddNearbyTo] = useState(false); // State for "Add nearby airports" checkbox for destination city
+
   const [directFlightsOnly, setDirectFlightsOnly] = useState(false);
 
   return (
-    <div className="bg-gradient-to-tr from-tertiary to-secondaryAccent   p-10 rounded-badge    max-w-6xl mx-auto mt-8 sm:mb-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0">
 
-   
+    <div className="bg-gradient-to-tr from-tertiary to-secondaryAccent   p-10 rounded-badge    max-w-6xl mx-auto mt-8 sm:mb-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0 z-30">
 
       {/* Title Section */}
       <h2 className=" text-4xl font-semibold mb-6 text-primary text-center sm:text-4xl ">
@@ -56,6 +56,7 @@ const SearchForm = () => {
       </div>
 
       {/* Cities and Dates Section */}
+
       <div className="flex flex-col sm:flex-row mb-6 space-y-4 sm:space-y-0 sm:space-x-4">
         <div className="flex flex-col sm:w-1/4 w-full ">
           {/* Departure city */}
@@ -81,6 +82,7 @@ const SearchForm = () => {
         </div>
 
         {/* Destination City */}
+
         <div className="flex flex-col sm:w-1/4 w-full">
           <label className="font-semibold mb-2 text-gray-800">To</label>
           <div className="relative">
@@ -140,6 +142,7 @@ const SearchForm = () => {
       </div>
 
       {/* Passengers and Class Section */}
+
       <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-3">
         {/* Number of Passengers */}
         <div className="flex flex-col sm:w-1/6 w-full">
@@ -153,6 +156,7 @@ const SearchForm = () => {
         </div>
 
         {/* Class Selection */}
+
         <div className="flex flex-col sm:w-1/6 w-full">
           <label className="font-semibold mb-2 text-gray-800">Class</label>
           <select className="p-2  border border-green-500 rounded-lg focus:outline-none focus:ring-3 focus:ring-blue-500 transition duration-300 w-full">
