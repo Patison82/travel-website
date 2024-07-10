@@ -10,10 +10,9 @@ const SearchForm = () => {
   const [directFlightsOnly, setDirectFlightsOnly] = useState(false);
 
   return (
-    <div className="bg-amber-200 shadow-2xl p-6 rounded-lg max-w-6xl mx-auto mt-8 sm:mb-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0">
+    <div className="bg-amber-200 shadow-2xl p-6 rounded-lg max-w-6xl mx-auto mt-8 sm:mb-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0 z-30">
       {/* Title Section */}
       <h2 className=" text-4xl font-semibold mb-6 text-teal-800 text-center sm:text-4xl ">
-
         Where to next ?
       </h2>
 
@@ -28,9 +27,7 @@ const SearchForm = () => {
             className="form-radio text-blue-600"
           />
 
-
           <span className="ml-2 text-">RETURN</span>
-
         </label>
         <label className="inline-flex items-center text-gray-800">
           <input
@@ -41,9 +38,7 @@ const SearchForm = () => {
             className="form-radio text-blue-600"
           />
 
-
           <span className="ml-2 ">ONE-WAY</span>
-
         </label>
       </div>
 
@@ -51,7 +46,6 @@ const SearchForm = () => {
 
       <div className="flex flex-col sm:flex-row mb-6 space-y-4 sm:space-y-0 sm:space-x-4">
         <div className="flex flex-col sm:w-1/4 w-full ">
-
           {/* Departure city */}
           <label className="font-semibold mb-2 text-gray-800">From</label>
           <div className="relative">
@@ -77,7 +71,6 @@ const SearchForm = () => {
         {/* Destination City */}
 
         <div className="flex flex-col sm:w-1/4 w-full">
-
           <label className="font-semibold mb-2 text-gray-800">To</label>
           <div className="relative">
             <input
@@ -107,7 +100,6 @@ const SearchForm = () => {
             className="p-2 border  border-green-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 w-full"
           />
 
-
           {/* Direct Flights Only Section */}
           <div className="inline-flex items-center mb-6">
             <label className="inline-flex items-center mt-2 text-sm text-gray-600 ">
@@ -123,7 +115,6 @@ const SearchForm = () => {
             </label>
           </div>
         </div>
-
 
         {/* Return Date (conditionally rendered based on trip type) */}
         {tripType === "return" && (
@@ -142,7 +133,6 @@ const SearchForm = () => {
       <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-3">
         {/* Number of Passengers */}
         <div className="flex flex-col sm:w-1/6 w-full">
-
           <label className="font-semibold mb-2 text-gray-800">Passengers</label>
           <input
             type="number"
@@ -155,7 +145,6 @@ const SearchForm = () => {
         {/* Class Selection */}
 
         <div className="flex flex-col sm:w-1/6 w-full">
-
           <label className="font-semibold mb-2 text-gray-800">Class</label>
           <select className="p-2  border border-green-500 rounded-lg focus:outline-none focus:ring-3 focus:ring-blue-500 transition duration-300 w-full">
             <option value="economy">Economy</option>
