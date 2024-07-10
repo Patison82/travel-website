@@ -86,7 +86,9 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a>Login</a>
+                  <a href="/login" className="justify-between">
+                    Login
+                  </a>
                 </li>
               </ul>
             </div>
