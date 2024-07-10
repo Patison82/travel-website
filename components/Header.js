@@ -2,11 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
 
-
-
-
-
-
 const Header = () => {
   return (
     
@@ -20,11 +15,13 @@ const Header = () => {
             </Link>
           </div>
          
+
             <ul className="capitalize  ">
               <li className=" btn btn-ghost text-[1rem] hidden hover:bg-primary sm:flex ">about</li>
               <li className="btn btn-ghost text-[1rem] hover:bg-primary">flights</li>
               <li className="btn btn-ghost text-[1rem] hover:bg-primary">hotels</li>
               <li className="hidden btn btn-ghost text-[1rem]  sm:flex hover:bg-primary">contact</li>
+
             </ul>
           
 
@@ -92,7 +89,11 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="hover:bg-primary">Login</a>
+
+                  <a href="/login" className="justify-between hover:bg-primary">
+                    Login
+                  </a>
+
                 </li>
               </ul>
             </div>
