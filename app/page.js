@@ -4,10 +4,7 @@ import SearchForm from "@/components/SearchForm";
 export default function Home() {
   return (
     <>
-
-      <main>
-
-      <main>
+      <main >
         <Parallax />
         <div className="w-full">
           <p>test space</p>
