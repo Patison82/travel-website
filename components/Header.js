@@ -1,6 +1,10 @@
 import Link from "next/link";
 
 import { FaUserCircle } from "react-icons/fa";
+
+
+
+
 const Header = () => {
   return (
     <header>
