@@ -1,9 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-// import Link from "next/link";
 import React, { useRef } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Parallax() {
   const ref = useRef(null);
@@ -26,9 +23,6 @@ export default function Parallax() {
       >
         <h1>Pavasa Travel Service</h1>
         <p></p>
-        {/* <Link href={"about"} className="z-30 relative">
-          <FontAwesomeIcon icon={faArrowDown} />
-        </Link> */}
       </motion.div>
 
       <motion.div
