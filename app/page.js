@@ -1,5 +1,6 @@
 import Parallax from "@/components/Main";
 import SearchForm from "@/components/SearchForm";
+import Icons from "@/components/Icons";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         </div>
 
         <SearchForm />
+        <Icons />
       </main>
     </>
   );
