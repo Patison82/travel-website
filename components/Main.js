@@ -10,21 +10,23 @@ export default function Parallax() {
   });
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
-  //   const textY = useTransform(scrollYProgress, [0, 1], ["0", "200%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0", "200%"]);
 
   return (
     <div
       ref={ref}
       className="w-full h-screen overflow-hidden relative grid place-items-center"
     >
-      {/* <motion.h1
-        style={{ y: textY }}
-        className="font-bold text-white text-7xl md:text-9xl relative z-30"
-      >
-        PARALLAX
-      </motion.h1> */}
       <motion.div
-        className="absolute inset-0 z-0"
+        style={{ y: textY }}
+        className="font-bold text-white text-5xl md:text-7xl relative z-30 drop-shadow-2xl w-full lg:w-1/2 text-center opacity-85"
+      >
+        <h1>Pavasa Travel Service</h1>
+        <p></p>
+      </motion.div>
+
+      <motion.div
+        className="absolute inset-0 z-10"
         style={{
           backgroundImage: `url(/whole.jpg)`,
           backgroundPosition: "bottom",
