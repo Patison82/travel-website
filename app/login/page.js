@@ -33,7 +33,7 @@ const Login = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-teal-500 text-white py-3 px-4 rounded-md font-medium shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              className="w-full bg-teal-500 text-white py-3 px-4 rounded-md font-medium shadow-sm hover:bg-yellow-00 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
               Continue
             </button>
