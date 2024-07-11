@@ -1,3 +1,4 @@
+import Carousel from "@/components/Carousel";
 import Parallax from "@/components/Main";
 import SearchForm from "@/components/SearchForm";
 
@@ -5,8 +6,7 @@ export default function Home() {
   return (
     <>
 
-      <main>
-
+    
       <main>
         <Parallax />
         <div className="w-full">
@@ -17,6 +17,7 @@ export default function Home() {
         </div>
 
         <SearchForm />
+        <Carousel />
       </main>
     </>
   );
