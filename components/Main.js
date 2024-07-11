@@ -10,7 +10,6 @@ export default function Parallax() {
   });
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
-  const backgroundY2 = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0", "200%"]);
 
   return (
@@ -18,12 +17,13 @@ export default function Parallax() {
       ref={ref}
       className="w-full h-screen overflow-hidden relative grid place-items-center"
     >
-      <motion.h1
+      <motion.div
         style={{ y: textY }}
-        className="font-bold text-white text-7xl md:text-9xl relative z-30 drop-shadow-2xl"
+        className="font-bold text-white text-5xl md:text-7xl relative z-30 drop-shadow-2xl w-full lg:w-1/2 text-center opacity-85"
       >
-        PASAVA
-      </motion.h1>
+        <h1>Pavasa Travel Service</h1>
+        <p></p>
+      </motion.div>
 
       <motion.div
         className="absolute inset-0 z-10"
