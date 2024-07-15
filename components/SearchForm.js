@@ -12,7 +12,7 @@ const SearchForm = () => {
   const [directFlightsOnly, setDirectFlightsOnly] = useState(false);
 
   return (
-    <div className="bg-gradient-to-tr from-tertiary to-secondaryAccent   p-10 rounded-badge    max-w-6xl mx-auto mt-8 sm:mb-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0 z-40">
+    <div className="bg-gradient-to-tr from-tertiary to-secondaryAccent   p-10 rounded-badge    max-w-6xl mx-auto mt-8 sm:mb-10  sm:bottom-0 sm:left-0 sm:right-0 z-40">
       {/* Title Section */}
       <h2 className=" text-4xl font-semibold mb-6 text-primary text-center sm:text-4xl ">
         {/* Plane Icon */}
