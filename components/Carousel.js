@@ -74,6 +74,27 @@ const Carousel = () => {
       price: "From 40 € ",
       link: "/destination/london"
     },
+    { 
+      name: "Berlin", 
+      image: "https://i.pinimg.com/564x/6f/89/04/6f890475c93d2e41529a903379552d07.jpg",
+      description: "Best weekend in London",
+      price: "From 20 € ",
+      link: "/destination/berlin"
+    },
+    { 
+      name: "Paris", 
+      image: "https://i.pinimg.com/564x/30/87/b5/3087b548130f018881ea7030cfbf352d.jpg",
+      description: "Car hire in Paris",
+      price: "From 25 € ",
+      link: "/destination/paris"
+    },
+    { 
+      name: "Oslo", 
+      image: "https://i.pinimg.com/564x/fa/cb/46/facb46fc366aa8df3bbe81ee1fd20014.jpg",
+      description: "Trip in Oslo",
+      price: "Only 90 € ",
+      link: "/destination/oslo"
+    },
   ];
 
   return (
