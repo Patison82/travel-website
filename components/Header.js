@@ -28,8 +28,8 @@ const Header = () => {
           </div>
 
           <ul className="capitalize  ">
-            <li className=" btn btn-ghost text-[1rem] hidden hover:bg-primary sm:flex ">
-              about
+          <li className=" btn btn-ghost text-[1rem] hidden hover:bg-primary sm:flex ">
+            <Link href="/about">about</Link>
             </li>
             <li className="btn btn-ghost text-[1rem] hover:bg-primary">
               flights

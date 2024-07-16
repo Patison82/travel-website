@@ -6,8 +6,10 @@ import {
   SignInButton,
   SignedIn,
   SignedOut,
-  UserButton
-} from '@clerk/nextjs'
+  UserButton,
+} from "@clerk/nextjs";
+
+import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,13 +20,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        {children}
-      </body>
-    </html>
-
-  </ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <Header />
+          <mail>{children}</mail>
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
