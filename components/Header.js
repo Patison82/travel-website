@@ -1,8 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
+import {UserButton } from '@clerk/nextjs'
+import {auth} from '@clerk/nextjs/server'
 
 const Header = () => {
+  const {userId}=auth();
+  
+
+ 
+
   return (
     <header className=" bg-transparet fixed top-0 right-0 left-0 z-40">
       <nav className="navbar  w-[90%] my-0 mx-auto">
@@ -75,35 +82,67 @@ const Header = () => {
                 </div>
               </div>
             </div>
+
+            
             <div className="dropdown dropdown-end">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar hover:bg-primary"
-              >
-                <div className="w-10 rounded-full">
-                  <FaUserCircle
-                    className="ml-[0.15rem] mt-[0.15rem]"
-                    size={35}
-                  />
-                </div>
-              </div>
+                
+              {/* {!userId &&(<>
               <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
+                
                 <li>
-                  <a className="justify-between hover:bg-primary">
-                    Register
+                  <Link href={"/sign-up"} className="justify-between hover:bg-primary">
+                    Sign Up
                     <span className="badge">New</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/login" className="justify-between hover:bg-primary">
-                    Login
-                  </a>
+                  <Link href={"/sign-in"} className="justify-between hover:bg-primary">
+                    Sign In
+                  </Link>
                 </li>
               </ul>
+              </>)}
+              <SignOutButton afterSignOutUrl="/"/> */}
+                
+              {!userId ? (
+                <>
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar hover:bg-primary"
+                >
+                  <div className="w-10 rounded-full">
+                    <FaUserCircle
+                      className="ml-[0.15rem] mt-[0.15rem]"
+                      size={35}
+                    />
+                    
+                  </div>
+                </div>
+              
+              <ul tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <li>
+                  <Link href="/sign-in" className="justify-between hover:bg-primary">Sign In</Link>
+                </li>
+                <li>
+                  <Link href="/sign-up" className="justify-between hover:bg-primary">Sign Up</Link>
+                </li>
+                </ul>
+                </>
+              
+          ) : (
+            
+            <UserButton showName afterSignOutUrl="/"/>
+           
+          )}
+        
+
+
+
             </div>
           </div>
         </div>
