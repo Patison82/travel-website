@@ -25,7 +25,7 @@ export default function Parallax() {
         <h1>Pavasa Travel Service</h1>
       </motion.div>
       <button className="z-40 font-bold text-3xl bg-gradient-to-tr from-primary to-secondary p-3 lg:w-1/10 w-1/10 rounded-2xl">
-        <a href="login">Test Test</a>
+        <a href="login">Sign in</a>
       </button>
 
       <motion.div
