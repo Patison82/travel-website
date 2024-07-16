@@ -4,7 +4,6 @@ import { useState } from "react";
 import { LiaPlaneDepartureSolid } from "react-icons/lia";
 import { LiaPlaneArrivalSolid } from "react-icons/lia";
 
-
 const SearchForm = () => {
   const [tripType, setTripType] = useState("return"); // State for trip type (return or one-way)
   const [addNearbyFrom, setAddNearbyFrom] = useState(false); // State for "Add nearby airports" checkbox for departure city
@@ -13,20 +12,17 @@ const SearchForm = () => {
   const [directFlightsOnly, setDirectFlightsOnly] = useState(false);
 
   return (
-
-    <div className="bg-gradient-to-tr from-tertiary to-secondaryAccent   p-10 rounded-badge    max-w-6xl mx-auto mt-8 sm:mb-10 sm:fixed sm:bottom-0 sm:left-0 sm:right-0 z-30">
-
+    <div className="bg-gradient-to-tr from-tertiary to-secondaryAccent   p-10 rounded-badge    max-w-6xl mx-auto mt-8 sm:mb-10  sm:bottom-0 sm:left-0 sm:right-0 z-40">
       {/* Title Section */}
       <h2 className=" text-4xl font-semibold mb-6 text-primary text-center sm:text-4xl ">
-
-      {/* Plane Icon */}
-      <div className="absolute top-8  left-1/4 text-primary">
-        <LiaPlaneDepartureSolid size="1em" />
-      </div>
+        {/* Plane Icon */}
+        <div className="absolute top-8  left-1/4 text-primary">
+          <LiaPlaneDepartureSolid size="1em" />
+        </div>
         Where to next ?
         <div className="absolute top-8  right-1/4 text-primary">
-        <LiaPlaneArrivalSolid size="1em" />
-      </div>
+          <LiaPlaneArrivalSolid size="1em" />
+        </div>
       </h2>
 
       {/* Trip Type Section */}
@@ -172,11 +168,9 @@ const SearchForm = () => {
         <button className="px-6 py-3 text-l bg-primary text-  font-semibold rounded-lg  hover:bg-tertiary transition duration-300 shadow-lg ">
           Search Flights
         </button>
-
-        
       </div>
     </div>
   );
-}; 
+};
 
 export default SearchForm;

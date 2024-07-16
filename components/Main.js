@@ -1,6 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
+import Link from "next/link";
 
 export default function Parallax() {
   const ref = useRef(null);
@@ -17,14 +18,18 @@ export default function Parallax() {
       ref={ref}
       className="w-full h-screen overflow-hidden relative grid place-items-center"
     >
-      <motion.h1
-        style={{ y: textY }}
-        className="font-bold text-white text-7xl md:text-9xl relative z-30"
-      >
-        PARALLAX
-      </motion.h1>
       <motion.div
-        className="absolute inset-0 z-0"
+        style={{ y: textY }}
+        className="font-bold text-white text-5xl md:text-7xl relative z-30 drop-shadow-2xl w-full lg:w-1/2 text-center"
+      >
+        <h1>Pavasa Travel Service</h1>
+      </motion.div>
+      <button className="z-40 font-bold text-3xl bg-gradient-to-tr from-primary to-secondary p-3 lg:w-1/10 w-1/10 rounded-2xl">
+        <a href="login">Test Test</a>
+      </button>
+
+      <motion.div
+        className="absolute inset-0 z-10"
         style={{
           backgroundImage: `url(/whole.jpg)`,
           backgroundPosition: "bottom",
