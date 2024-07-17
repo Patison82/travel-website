@@ -30,8 +30,10 @@ const Header = () => {
             <li className="btn btn-ghost text-[1rem] hover:bg-primary">
               hotels
             </li>
-            <li className="hidden btn btn-ghost text-[1rem]  sm:flex hover:bg-primary">
-              contact
+            <li>
+            <Link href="/contact" passHref={true} legacyBehavior={true}>
+                <a className="btn btn-ghost text-[1rem] hover:bg-primary">Contact</a>
+            </Link>
             </li>
           </ul>
 

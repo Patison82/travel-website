@@ -1,15 +1,21 @@
 import Carousel from "@/components/Carousel";
 import Parallax from "@/components/Main";
-import SearchForm from "@/components/SearchForm";
+import FlightSearchForm from "@/components/FlightSearchForm";
+import HotelSearchForm from "@/components/HotelSearchForm";
 import Icons from "@/components/Icons";
+ 
+
+
+
 
 export default function Home() {
   return (
     <>
       <main >
         <Parallax />
-        <SearchForm />
+        <FlightSearchForm />
         <Carousel />
+        <HotelSearchForm />
         <Icons />
       </main>
     </>
