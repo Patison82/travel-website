@@ -105,56 +105,70 @@ const ContactPage = () => {
           </ul>
         </div>
 
-       
-           {/* Contact Us Section */}
-<div className="bg-secondary rounded-2xl p-6 shadow-lg mt-[4rem] text-center">
-  <h2 className="text-2xl font-bold text-black mb-8">Contact Us:</h2>
+        {/* Contact Us Section */}
+        <div className="bg-secondary rounded-2xl p-6 shadow-lg mt-[4rem] text-center">
+          <h2 className="text-2xl font-bold text-black mb-8">Contact Us:</h2>
 
-  <div className="grid grid-cols-3 ml-[8rem] mb-4">
-    {/* Mail */}
-    <div className="flex items-center">
-      <span className="text-primary text-2xl font-semibold mr-2" role="img" aria-label="Mail Icon">
-        📧
-      </span>
-      <div className="text-primary text-l font-semibold">
-        <p className="mb-0">Mail:</p>
-        <a href="mailto:pavasa-team@gmail.com" className="ml-1 hover:underline">
-          pavasa-team@gmail.com
-        </a>
-      </div>
-    </div>
+          <div className="grid grid-cols-3 ml-[8rem] mb-4">
+            {/* Mail */}
+            <div className="flex items-center">
+              <span
+                className="text-primary text-2xl font-semibold mr-2"
+                role="img"
+                aria-label="Mail Icon"
+              >
+                📧
+              </span>
+              <div className="text-primary text-l font-semibold">
+                <p className="mb-0">Mail:</p>
+                <a
+                  href="mailto:pavasa-team@gmail.com"
+                  className="ml-1 hover:underline"
+                >
+                  pavasa-team@gmail.com
+                </a>
+              </div>
+            </div>
 
-    {/* Phone */}
-    <div className="flex items-center">
-      <span className="text-primary text-2xl font-semibold mr-2" role="img" aria-label="Phone Icon">
-        📞
-      </span>
-      <div className="text-primary text-l font-semibold">
-        <p className="mb-0">Phone:</p>
-        <a href="tel:+491733868411" className="ml-1 hover:underline">
-          +49 (0) 173 3868 411
-        </a>
-      </div>
-    </div>
+            {/* Phone */}
+            <div className="flex items-center">
+              <span
+                className="text-primary text-2xl font-semibold mr-2"
+                role="img"
+                aria-label="Phone Icon"
+              >
+                📞
+              </span>
+              <div className="text-primary text-l font-semibold">
+                <p className="mb-0">Phone:</p>
+                <a href="tel:+491733868411" className="ml-1 hover:underline">
+                  +49 (0) 173 3868 411
+                </a>
+              </div>
+            </div>
 
-    {/* Address */}
-    <div className="flex items-center">
-      <span className="text-primary text-2xl font-semibold mr-0.5" role="img" aria-label="Address Icon">
-        🏢
-      </span>
-      <div className="text-primary text-l font-semibold">
-        <p className="mb-0">Address:</p>
-        <p className="ml-1 display flex">
-          Simsseestraße 6, 81549 Munich, Germany
-        </p>
-      </div>
-    </div>
-  </div>
+            {/* Address */}
+            <div className="flex items-center">
+              <span
+                className="text-primary text-2xl font-semibold mr-0.5"
+                role="img"
+                aria-label="Address Icon"
+              >
+                🏢
+              </span>
+              <div className="text-primary text-l font-semibold">
+                <p className="mb-0">Address:</p>
+                <p className="ml-1 display flex">
+                  Simsseestraße 6, 81549 Munich, Germany
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <p className="text-primary text-lg font-semibold mt-8">
-    We are available from Monday to Friday from 10am to 4pm
-  </p>
-</div>
+          <p className="text-primary text-lg font-semibold mt-8">
+            We are available from Monday to Friday from 10am to 4pm
+          </p>
+        </div>
         {/* Map Section */}
         <div className="map-section mt-8 text-center">
           <h2 className="text-2xl font-bold text-black mb-4">Our Location</h2>
