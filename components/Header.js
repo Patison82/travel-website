@@ -35,7 +35,7 @@ const Header = () => {
               flights
             </li>
             <li className="btn btn-ghost text-[1rem] hover:bg-primary">
-              hotels
+            <Link href="/hotels">hotels</Link>
             </li>
             <li>
             <Link href="/contact" passHref={true} legacyBehavior={true}>
