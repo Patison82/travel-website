@@ -1,0 +1,473 @@
+[
+    {
+      "airlineName": "Airline One",
+      "countryFrom": "Germany",
+      "countryTo": "USA",
+      "flightNummer": "A123",
+      "flightType": "RETURN",
+      "from": "Berlin",
+      "to": "New York",
+      "travelClass": "Economy",
+      "depart": {
+        "airport": "BER",
+        "time": "2024-08-01T08:00:00Z"
+      },
+      "return": {
+        "airport": "JFK",
+        "time": "2024-08-15T08:00:00Z"
+      },
+      "price": 800,
+      "priceType": "adult",
+      "directFlightOnly": true,
+      "addNearbyAirline": false,
+      "countPassenger": 95,
+      "totalPassenger": 100,
+      "flightDurationDepart": 540,
+      "flightDurationReturn": 540
+    },
+    {
+      "airlineName": "Airline Two",
+      "countryFrom": "UK",
+      "countryTo": "France",
+      "flightNummer": "B456",
+      "flightType": "ONE-WAY",
+      "from": "London",
+      "to": "Paris",
+      "travelClass": "Business",
+      "depart": {
+        "airport": "LHR",
+        "time": "2024-08-05T10:00:00Z"
+      },
+      "price": 350,
+      "priceType": "child",
+      "directFlightOnly": false,
+      "addNearbyAirline": true,
+      "countPassenger": 80,
+      "totalPassenger": 100,
+      "flightDurationDepart": 90
+    },
+    {
+      "airlineName": "Airline Three",
+      "countryFrom": "Italy",
+      "countryTo": "Spain",
+      "flightNummer": "C789",
+      "flightType": "RETURN",
+      "from": "Rome",
+      "to": "Madrid",
+      "travelClass": "First",
+      "depart": {
+        "airport": "FCO",
+        "time": "2024-08-10T14:00:00Z"
+      },
+      "return": {
+        "airport": "MAD",
+        "time": "2024-08-20T18:00:00Z"
+      },
+      "price": 1200,
+      "priceType": "adult",
+      "directFlightOnly": true,
+      "addNearbyAirline": false,
+      "countPassenger": 50,
+      "totalPassenger": 50,
+      "flightDurationDepart": 150,
+      "flightDurationReturn": 150
+    },
+    {
+      "airlineName": "Airline Four",
+      "countryFrom": "Australia",
+      "countryTo": "Japan",
+      "flightNummer": "D012",
+      "flightType": "ONE-WAY",
+      "from": "Sydney",
+      "to": "Tokyo",
+      "travelClass": "Economy",
+      "depart": {
+        "airport": "SYD",
+        "time": "2024-08-15T22:00:00Z"
+      },
+      "price": 900,
+      "priceType": "special",
+      "directFlightOnly": true,
+      "addNearbyAirline": false,
+      "countPassenger": 100,
+      "totalPassenger": 100,
+      "flightDurationDepart": 600
+    },
+    {
+      "airlineName": "Airline Five",
+      "countryFrom": "Canada",
+      "countryTo": "Mexico",
+      "flightNummer": "E345",
+      "flightType": "RETURN",
+      "from": "Toronto",
+      "to": "Cancun",
+      "travelClass": "Business",
+      "depart": {
+        "airport": "YYZ",
+        "time": "2024-08-20T06:00:00Z"
+      },
+      "return": {
+        "airport": "CUN",
+        "time": "2024-09-05T06:00:00Z"
+      },
+      "price": 750,
+      "priceType": "adult",
+      "directFlightOnly": false,
+      "addNearbyAirline": true,
+      "countPassenger": 85,
+      "totalPassenger": 100,
+      "flightDurationDepart": 270,
+      "flightDurationReturn": 270
+    },
+    {
+      "airlineName": "Airline Six",
+      "countryFrom": "Brazil",
+      "countryTo": "Argentina",
+      "flightNummer": "F678",
+      "flightType": "ONE-WAY",
+      "from": "Sao Paulo",
+      "to": "Buenos Aires",
+      "travelClass": "Economy",
+      "depart": {
+        "airport": "GRU",
+        "time": "2024-08-25T12:00:00Z"
+      },
+      "price": 400,
+      "priceType": "child",
+      "directFlightOnly": true,
+      "addNearbyAirline": false,
+      "countPassenger": 60,
+      "totalPassenger": 100,
+      "flightDurationDepart": 180
+    },
+    {
+      "airlineName": "Airline Seven",
+      "countryFrom": "South Africa",
+      "countryTo": "Nigeria",
+      "flightNummer": "G901",
+      "flightType": "RETURN",
+      "from": "Johannesburg",
+      "to": "Lagos",
+      "travelClass": "First",
+      "depart": {
+        "airport": "JNB",
+        "time": "2024-09-01T16:00:00Z"
+      },
+      "return": {
+        "airport": "LOS",
+        "time": "2024-09-10T20:00:00Z"
+      },
+      "price": 1300,
+      "priceType": "special",
+      "directFlightOnly": false,
+      "addNearbyAirline": true,
+      "countPassenger": 70,
+      "totalPassenger": 100,
+      "flightDurationDepart": 330,
+      "flightDurationReturn": 330
+    },
+    {
+      "airlineName": "Airline Eight",
+      "countryFrom": "India",
+      "countryTo": "Thailand",
+      "flightNummer": "H234",
+      "flightType": "ONE-WAY",
+      "from": "Mumbai",
+      "to": "Bangkok",
+      "travelClass": "Business",
+      "depart": {
+        "airport": "BOM",
+        "time": "2024-09-05T04:00:00Z"
+      },
+      "price": 600,
+      "priceType": "adult",
+      "directFlightOnly": true,
+      "addNearbyAirline": false,
+      "countPassenger": 90,
+      "totalPassenger": 100,
+      "flightDurationDepart": 240
+    },
+    {
+      "airlineName": "Airline Nine",
+      "countryFrom": "China",
+      "countryTo": "South Korea",
+      "flightNummer": "I567",
+      "flightType": "RETURN",
+      "from": "Beijing",
+      "to": "Seoul",
+      "travelClass": "Economy",
+      "depart": {
+        "airport": "PEK",
+        "time": "2024-09-10T10:00:00Z"
+      },
+      "return": {
+        "airport": "ICN",
+        "time": "2024-09-20T10:00:00Z"
+      },
+      "price": 500,
+      "priceType": "child",
+      "directFlightOnly": false,
+      "addNearbyAirline": true,
+      "countPassenger": 40,
+      "totalPassenger": 50,
+      "flightDurationDepart": 120,
+      "flightDurationReturn": 120
+    },
+    {
+      "airlineName": "Airline Ten",
+      "countryFrom": "Russia",
+      "countryTo": "Turkey",
+      "flightNummer": "J890",
+      "flightType": "ONE-WAY",
+      "from": "Moscow",
+      "to": "Istanbul",
+      "travelClass": "First",
+      "depart": {
+        "airport": "SVO",
+        "time": "2024-09-15T14:00:00Z"
+      },
+      "price": 1400,
+      "priceType": "adult",
+      "directFlightOnly": true,
+      "addNearbyAirline": false,
+      "countPassenger": 45,
+      "totalPassenger": 50,
+      "flightDurationDepart": 210
+    },
+    {
+      "airlineName": "Airline Eleven",
+      "countryFrom": "Egypt",
+      "countryTo": "UAE",
+      "flightNummer": "K123",
+      "flightType": "RETURN",
+      "from": "Cairo",
+      "to": "Dubai",
+      "travelClass": "Economy",
+      "depart": {
+        "airport": "CAI",
+        "time": "2024-09-20T08:00:00Z"
+      },
+      "return": {
+        "airport": "DXB",
+        "time": "2024-10-05T08:00:00Z"
+      },
+      "price": 700,
+      "priceType": "special",
+      "directFlightOnly": true,
+      "addNearbyAirline": false,
+      "countPassenger": 55,
+      "totalPassenger": 100,
+      "flightDurationDepart": 180,
+      "flightDurationReturn": 180
+    },
+    {
+      "airlineName": "Airline Twelve",
+      "countryFrom": "USA",
+      "countryTo": "Canada",
+      "flightNummer": "L456",
+      "flightType": "ONE-WAY",
+      "from": "Los Angeles",
+      "to": "Vancouver",
+      "travelClass": "Business",
+      "depart": {
+        "airport": "LAX",
+        "time": "2024-09-25T18:00:00Z"
+      },
+      "price": 500,
+      "priceType": "child",
+      "directFlightOnly": false,
+      "addNearbyAirline": true,
+      "countPassenger": 60,
+      "totalPassenger": 100,
+      "flightDurationDepart": 150
+    },
+    {
+      "airlineName": "Airline Thirteen",
+      "countryFrom": "Japan",
+      "countryTo": "South Korea",
+      "flightNummer": "M789",
+      "flightType": "RETURN",
+      "from": "Tokyo",
+      "to": "Seoul",
+      "travelClass": "First",
+      "depart": {
+        "airport": "NRT",
+        "time": "2024-10-01T22:00:00Z"
+      },
+      "return": {
+        "airport": "ICN",
+        "time": "2024-10-15T22:00:00Z"
+      },
+      "price": 1300,
+      "priceType": "adult",
+      "directFlightOnly": true,
+      "addNearbyAirline": false,
+      "countPassenger": 50,
+      "totalPassenger": 50,
+      "flightDurationDepart": 120,
+      "flightDurationReturn": 120
+    },
+    {
+      "airlineName": "Airline Fourteen",
+      "countryFrom": "Brazil",
+      "countryTo": "Chile",
+      "flightNummer": "N012",
+      "flightType": "ONE-WAY",
+      "from": "Rio de Janeiro",
+      "to": "Santiago",
+      "travelClass": "Economy",
+      "depart": {
+        "airport": "GIG",
+        "time": "2024-10-05T08:00:00Z"
+      },
+      "price": 400,
+      "priceType": "special",
+      "directFlightOnly": false,
+      "addNearbyAirline": true,
+      "countPassenger": 85,
+      "totalPassenger": 100,
+      "flightDurationDepart": 240
+    },
+    {
+      "airlineName": "Airline Fifteen",
+      "countryFrom": "Australia",
+      "countryTo": "New Zealand",
+      "flightNummer": "O345",
+      "flightType": "RETURN",
+      "from": "Melbourne",
+      "to": "Auckland",
+      "travelClass": "Business",
+      "depart": {
+        "airport": "MEL",
+        "time": "2024-10-10T12:00:00Z"
+      },
+      "return": {
+        "airport": "AKL",
+        "time": "2024-10-20T12:00:00Z"
+      },
+      "price": 900,
+      "priceType": "adult",
+      "directFlightOnly": true,
+      "addNearbyAirline": false,
+      "countPassenger": 75,
+      "totalPassenger": 100,
+      "flightDurationDepart": 180,
+      "flightDurationReturn": 180
+    },
+    {
+      "airlineName": "Airline Sixteen",
+      "countryFrom": "France",
+      "countryTo": "Germany",
+      "flightNummer": "P678",
+      "flightType": "ONE-WAY",
+      "from": "Paris",
+      "to": "Berlin",
+      "travelClass": "First",
+      "depart": {
+        "airport": "CDG",
+        "time": "2024-10-15T06:00:00Z"
+      },
+      "price": 600,
+      "priceType": "child",
+      "directFlightOnly": false,
+      "addNearbyAirline": true,
+      "countPassenger": 95,
+      "totalPassenger": 100,
+      "flightDurationDepart": 120
+    },
+    {
+      "airlineName": "Airline Seventeen",
+      "countryFrom": "Singapore",
+      "countryTo": "Malaysia",
+      "flightNummer": "Q901",
+      "flightType": "RETURN",
+      "from": "Singapore",
+      "to": "Kuala Lumpur",
+      "travelClass": "Economy",
+      "depart": {
+        "airport": "SIN",
+        "time": "2024-10-20T14:00:00Z"
+      },
+      "return": {
+        "airport": "KUL",
+        "time": "2024-10-25T14:00:00Z"
+      },
+      "price": 300,
+      "priceType": "special",
+      "directFlightOnly": true,
+      "addNearbyAirline": false,
+      "countPassenger": 50,
+      "totalPassenger": 100,
+      "flightDurationDepart": 60,
+      "flightDurationReturn": 60
+    },
+    {
+      "airlineName": "Airline Eighteen",
+      "countryFrom": "South Africa",
+      "countryTo": "Kenya",
+      "flightNummer": "R234",
+      "flightType": "ONE-WAY",
+      "from": "Cape Town",
+      "to": "Nairobi",
+      "travelClass": "Business",
+      "depart": {
+        "airport": "CPT",
+        "time": "2024-10-25T10:00:00Z"
+      },
+      "price": 700,
+      "priceType": "adult",
+      "directFlightOnly": false,
+      "addNearbyAirline": true,
+      "countPassenger": 80,
+      "totalPassenger": 100,
+      "flightDurationDepart": 300
+    },
+    {
+      "airlineName": "Airline Nineteen",
+      "countryFrom": "Italy",
+      "countryTo": "Greece",
+      "flightNummer": "S567",
+      "flightType": "RETURN",
+      "from": "Milan",
+      "to": "Athens",
+      "travelClass": "First",
+      "depart": {
+        "airport": "MXP",
+        "time": "2024-10-30T18:00:00Z"
+      },
+      "return": {
+        "airport": "ATH",
+        "time": "2024-11-10T18:00:00Z"
+      },
+      "price": 1100,
+      "priceType": "child",
+      "directFlightOnly": true,
+      "addNearbyAirline": false,
+      "countPassenger": 60,
+      "totalPassenger": 100,
+      "flightDurationDepart": 120,
+      "flightDurationReturn": 120
+    },
+    {
+      "airlineName": "Airline Twenty",
+      "countryFrom": "Mexico",
+      "countryTo": "Peru",
+      "flightNummer": "T890",
+      "flightType": "ONE-WAY",
+      "from": "Mexico City",
+      "to": "Lima",
+      "travelClass": "Economy",
+      "depart": {
+        "airport": "MEX",
+        "time": "2024-11-05T22:00:00Z"
+      },
+      "price": 500,
+      "priceType": "special",
+      "directFlightOnly": false,
+      "addNearbyAirline": true,
+      "countPassenger": 85,
+      "totalPassenger": 100,
+      "flightDurationDepart": 360
+    }
+  ]
+  
