@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-//hotels + availability
+// hotels + availab.
 const hotels = [
   {
     id: 1,
@@ -71,13 +71,14 @@ const hotels = [
 ];
 
 function HotelsPage() {
-  const [sortBy, setSortBy] = useState('Popularity'); 
+  const [sortBy, setSortBy] = useState('Best Guest Ratings'); 
   const [showCalendar, setShowCalendar] = useState(false); 
   const [availableMonths, setAvailableMonths] = useState([]); 
   const [selectedHotelId, setSelectedHotelId] = useState(null); 
 
   const [selectedDistances, setSelectedDistances] = useState([]);
   const [selectedMonths, setSelectedMonths] = useState([]);
+  const [selectedPrices, setSelectedPrices] = useState([]);
 
   //criteria
   const sortHotels = (criteria) => {
@@ -88,38 +89,38 @@ function HotelsPage() {
         return hotels.slice().sort((a, b) => parseFloat(a.location.split(': ')[1].split(' ')[0]) - parseFloat(b.location.split(': ')[1].split(' ')[0]));
       case 'Lowest Price':
         return hotels.slice().sort((a, b) => a.price - b.price);
-      case 'Popularity':
       default:
-        return hotels.slice().sort((a, b) => b.reviews - a.reviews);
+        return hotels;
     }
   };
 
-  const filterHotels = (hotels) => {
-    return hotels.filter(hotel => {
-      const distance = parseFloat(hotel.location.split(': ')[1].split(' ')[0]);
-      const isDistanceMatch = selectedDistances.length === 0 || selectedDistances.some(dist => {
-        if (dist === 'Less than 1 km') return distance < 1;
-        if (dist === 'Less than 3 km') return distance < 3;
-        if (dist === 'Less than 5 km') return distance < 5;
-        return true;
-      });
-
-      const isMonthMatch = selectedMonths.length === 0 || selectedMonths.some(month => hotel.availableMonths.some(avMonth => avMonth.includes(month)));
-
-      return isDistanceMatch && isMonthMatch;
+  const filteredHotels = sortHotels(sortBy).filter(hotel => {
+    const distance = parseFloat(hotel.location.split(': ')[1].split(' ')[0]);
+    const isDistanceMatch = selectedDistances.length === 0 || selectedDistances.some(dist => {
+      if (dist === 'Less than 1 km') return distance < 1;
+      if (dist === 'Less than 3 km') return distance < 3;
+      if (dist === 'Less than 5 km') return distance < 5;
+      return true;
     });
-  };
 
-  const sortedHotels = sortHotels(sortBy);
-  const filteredHotels = filterHotels(sortedHotels);
+    const isMonthMatch = selectedMonths.length === 0 || selectedMonths.some(month => hotel.availableMonths.some(avMonth => avMonth.includes(month)));
+
+    const isPriceMatch = selectedPrices.length === 0 || selectedPrices.some(priceRange => {
+      if (priceRange === '10-100 €') return hotel.price >= 10 && hotel.price <= 100;
+      if (priceRange === '100-200 €') return hotel.price > 100 && hotel.price <= 200;
+      if (priceRange === '200-450 €') return hotel.price > 200 && hotel.price <= 450;
+      if (priceRange === '500 € and more') return hotel.price > 450;
+      return true;
+    });
+
+    return isDistanceMatch && isMonthMatch && isPriceMatch;
+  });
 
   const handleCheckAvailability = (hotelId) => {
-    const selectedHotel = hotels.find(hotel => hotel.id === hotelId);
-    if (selectedHotel) {
-      setAvailableMonths(selectedHotel.availableMonths);
-      setSelectedHotelId(hotelId);
-      setShowCalendar(true); 
-    }
+    const hotel = hotels.find(hotel => hotel.id === hotelId);
+    setAvailableMonths(hotel.availableMonths);
+    setSelectedHotelId(hotelId);
+    setShowCalendar(true);
   };
 
   const handleDistanceChange = (distance) => {
@@ -130,42 +131,66 @@ function HotelsPage() {
     setSelectedMonths(prev => prev.includes(month) ? prev.filter(m => m !== month) : [...prev, month]);
   };
 
+  const handlePriceChange = (priceRange) => {
+    setSelectedPrices(prev => prev.includes(priceRange) ? prev.filter(p => p !== priceRange) : [...prev, priceRange]);
+  };
+
+ //left  & top side
   return (
     <div className="bg-white">
       <div className="container mx-auto px-4 pt-32">
-        <h1 className="text-3xl font-bold my-4">Our Top Hotels</h1>
+        <h1 className="text-4xl font-bold my-4 ml-8 text-teal-500">Our Top Hotels</h1>
 
         <div className="flex">
           <div className="w-1/4 pr-4">
             <div className="mb-4">
-              <a href={hotels[0].mapLink} target="_blank" className="text-teal-600">Show on the map</a>
-            </div>
+              <div className="mb-4 ml-8">
+                <a href="https://www.google.com/maps/place/Berlin/@52.5063843,13.0944159,10z/data=!3m1!4b1!4m6!3m5!1s0x47a84e373f035901:0x42120465b5e3b70!8m2!3d52.5200066!4d13.404954!16zL20vMDE1NnE?entry=ttu" target="_blank">
+                  <img src="https://www.logo.wine/a/logo/Google_Maps/Google_Maps-Logo.wine.svg" alt="Google Maps" className="mx-auto my-4 ml-4" style={{ width: '200px' }} />
+                </a>
+              </div>
+              
+              <div className="mb-4 ml-8">
+                <a href={hotels[0].mapLink} target="_blank" className="text-teal-600">Show on the map</a>
+              </div>
 
-            <div className="mb-4">
-              <h2 className="text-xl font-bold mb-2">Distance to Center</h2>
-              {['Less than 1 km', 'Less than 3 km', 'Less than 5 km'].map(distance => (
-                <div key={distance}>
-                  <input type="checkbox" id={distance} className="mr-2" checked={selectedDistances.includes(distance)} onChange={() => handleDistanceChange(distance)} />
-                  <label htmlFor={distance}>{distance}</label>
-                </div>
-              ))}
-            </div>
+              <div className="mb-4 ml-8">
+                <h2 className="text-xl font-bold mb-2">Distance to Center</h2>
+                {['Less than 1 km', 'Less than 3 km', 'Less than 5 km'].map(distance => (
+                  <div key={distance}>
+                    <input type="checkbox" id={distance} className="mr-2" checked={selectedDistances.includes(distance)} onChange={() => handleDistanceChange(distance)} />
+                    <label htmlFor={distance}>{distance}</label>
+                  </div>
+                ))}
+              </div>
 
-            <div className="mb-4">
-              <h2 className="text-xl font-bold mb-2">Next available dates within 3 months</h2>
-              {['August', 'September', 'October', 'November', 'December'].map(month => (
-                <div key={month}>
-                  <input type="checkbox" id={month} className="mr-2" checked={selectedMonths.includes(month)} onChange={() => handleMonthChange(month)} />
-                  <label htmlFor={month}>{month}</label>
-                </div>
-              ))}
+              <div className="mb-4 ml-8">
+                <h2 className="text-xl font-bold mb-2">Price</h2>
+                {['10-100 €', '100-200 €', '200-450 €', '500 € and more'].map(priceRange => (
+                  <div key={priceRange}>
+                    <input type="checkbox" id={priceRange} className="mr-2" checked={selectedPrices.includes(priceRange)} onChange={() => handlePriceChange(priceRange)} />
+                    <label htmlFor={priceRange}>{priceRange}</label>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mb-4 ml-8">
+                <h2 className="text-xl font-bold mb-2">Next available dates</h2>
+                {['August', 'September', 'October', 'November', 'December'].map(month => (
+                  <div key={month}>
+                    <input type="checkbox" id={month} className="mr-2" checked={selectedMonths.includes(month)} onChange={() => handleMonthChange(month)} />
+                    <label htmlFor={month}>{month}</label>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
+           
           <div className="w-3/4">
             <div className="flex justify-between items-center mb-4">
               <div className="flex space-x-4">
-                {['Best Guest Ratings', 'Distance to City Center', 'Lowest Price', 'Popularity'].map(option => (
+                {['Best Guest Ratings', 'Distance to City Center', 'Lowest Price'].map(option => (
                   <button
                     key={option}
                     className={`${sortBy === option ? 'text-teal-600 border-b-2 border-teal-600' : ''}`}
@@ -176,7 +201,7 @@ function HotelsPage() {
                 ))}
               </div>
               <div>
-                <span className="mr-2">Select travel dates to see current prices and offers.</span>
+                <span className="mr-2">Select travel dates to see current offers</span>
                 <button className="text-teal-600">Select dates</button>
               </div>
             </div>
@@ -236,5 +261,3 @@ function HotelsPage() {
 }
 
 export default HotelsPage;
-
-
