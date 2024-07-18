@@ -10,13 +10,13 @@ export default function Parallax() {
     offset: ["start start", "end start"],
   });
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0", "200%"]);
 
   return (
     <div
       ref={ref}
-      className="w-full h-screen overflow-hidden relative grid place-items-center"
+      className="w-full h-screen overflow-hidden relative grid place-items-center mb-10"
     >
       <motion.div
         style={{ y: textY }}
