@@ -1,7 +1,9 @@
 
-import flightModel from "@/models/FlightModel";
+import flightModel from "@/models/flightModel";
 import connectDB from "@/utils/database/connectDB";
 import { NextResponse } from "next/server";
+
+
 
 export async function GET() {
   await connectDB();
@@ -16,16 +18,18 @@ export async function GET() {
 }
 
 
-export async function POST(req){
 
-  await connectDB()
-  try {
-    const body = await req.json();
 
-    await flightModel.create(body)
+// export async function POST(req){
 
-  } catch (error) {
-    console.error("Server Error", error);
-    return NextResponse.json({ message: "GET Error!" }, { status: 500 });
-  }
-}
+//   await connectDB()
+//   try {
+//     const body = await req.json();
+
+//     await flightModel.create(body)
+
+//   } catch (error) {
+//     console.error("Server Error", error);
+//     return NextResponse.json({ message: "GET Error!" }, { status: 500 });
+//   }
+// }
