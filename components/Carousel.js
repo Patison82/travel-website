@@ -102,7 +102,7 @@ const Carousel = () => {
       <div
         className="carousel w-full rounded-box h-full overflow-x-scroll flex space-x-4 p-4 scrollbar-hide"
         ref={carouselRef}
-        style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none' }}
+       /*  style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none' }} */
       >
         {cities.map((city, index) => (
           <div key={index} className="carousel-item flex-none w-80">
