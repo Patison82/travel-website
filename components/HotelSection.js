@@ -1,10 +1,10 @@
 export default function HotelSection() {
   return (
     <div
-      class="container h-72 rounded-xl flex items-center justify-center bg-secondaryAccent m-auto mt-20 bg-cover bg-center"
+      className="container h-72 rounded-xl flex items-center justify-center bg-secondaryAccent m-auto mt-20 bg-cover bg-center"
       style={{ backgroundImage: "url('/glasses.jpg')" }}
     >
-      <div class="box ">
+      <div className="box ">
         <h1 className="font-bold text-3xl lg:text-5xl drop-shadow-lg">
           LET'S TAKE A TRIP TOGETHER
         </h1>
