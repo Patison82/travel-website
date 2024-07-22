@@ -78,7 +78,7 @@ const flights = [
   {
     id: 5,
     airline: 'Lufthansa',
-    departure: '2024-08-14T70:30:00Z',
+    departure: '2024-08-14T07:30:00Z',
     arrival: '2024-08-14T11:00:00Z',
     departureAirport: 'MU Munich',
     arrivalAirport: 'HAM Hamburg',
