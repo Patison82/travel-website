@@ -91,6 +91,7 @@ const flights = [
       { city: 'Paris', duration: '1 hr' } 
     ]
   },
+  
   {
     id: 6,
     airline: 'EasyJet',
