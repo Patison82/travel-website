@@ -138,7 +138,7 @@ const Header = () => {
               
           ) : (
             
-            <UserButton showName afterSignOutUrl="/"/>
+            <UserButton showName />
            
           )}
         
