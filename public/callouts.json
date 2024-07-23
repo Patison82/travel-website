@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Desk and Office",
+      "description": "Work from home accessories",
+      "imageSrc": "/news/52.png",
+      "href": "#"
+    },
+    {
+      "name": "Self-Improvement",
+      "description": "Journals and note-taking",
+      "imageSrc": "/news/53.png",
+      "href": "#"
+    },
+    {
+      "name": "Travel",
+      "description": "Daily commute essentials",
+      "imageSrc": "/news/54.png",
+      "href": "#"
+    },
+    {
+      "name": "See",
+      "description": "Malta Leads: Ghajn Tuffieha Beach Europe Beauty 2024",
+      "imageSrc": "/news/55.png",
+      "href": "#"
+    },
+    {
+      "name": "Flight",
+      "description": "Stuttgart Airport: 2024 Best European Airport",
+      "imageSrc": "/news/56.png",
+      "href": "#"
+    },
+    {
+      "name": "See",
+      "description": "Discover-the-most Affordable Vacation 2024",
+      "imageSrc": "/news/57.png",
+      "href": "#"
+    }
+  ]
+  
