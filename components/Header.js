@@ -1,22 +1,20 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
-import {UserButton } from '@clerk/nextjs'
-import {auth} from '@clerk/nextjs/server'
+import { UserButton } from '@clerk/nextjs';
+import { useUser } from "@clerk/clerk-react";
 
 const Header = () => {
-  const {userId}=auth();
-  
-
- 
+  const { user } = useUser();
 
   return (
-    <header className=" bg-transparet fixed top-0 right-0 left-0 z-40">
-      <nav className="navbar  w-[90%] my-0 mx-auto">
-        <div className="navbar ">
+    
+    <header className="bg-transparent fixed top-0 right-0 left-0 z-40">
+      <nav className="navbar w-[90%] my-0 mx-auto">
+        <div className="navbar">
           <div className="flex-1">
-            {/* <a className="btn btn-ghost text-xl">Logo</a> */}
-            <Link href={"/"}>
+            <Link href="/">
               <Image
                 className="rounded"
                 src="/pavasa.png"
@@ -26,21 +24,24 @@ const Header = () => {
               />
             </Link>
           </div>
+          <ul className="capitalize">
+            <li className="btn btn-ghost text-[1rem] hidden hover:bg-primary sm:flex">
+              <Link href="/about">About</Link>
+            </li>
+            <li className="btn btn-ghost text-[1rem] hover:bg-primary">
 
-          <ul className="capitalize  ">
-          <li className=" btn btn-ghost text-[1rem] hidden hover:bg-primary sm:flex ">
-            <Link href="/about">about</Link>
-            </li>
-            <li className="btn btn-ghost text-[1rem] hover:bg-primary">
+              Flights
+
              <Link href="/flights">flights</Link>
+
             </li>
             <li className="btn btn-ghost text-[1rem] hover:bg-primary">
-            <Link href="/hotels">hotels</Link>
+              <Link href="/hotels">Hotels</Link>
             </li>
             <li>
-            <Link href="/contact" passHref={true} legacyBehavior={true}>
+              <Link href="/contact" passHref={true} legacyBehavior={true}>
                 <a className="btn btn-ghost text-[1rem] hover:bg-primary">Contact</a>
-            </Link>
+              </Link>
             </li>
           </ul>
 
@@ -77,74 +78,52 @@ const Header = () => {
                   <span className="text-lg font-bold">8 Items</span>
                   <span className="text-info">Subtotal: $999</span>
                   <div className="card-actions">
+                    <Link href="/checkout" className="card-actions">
                     <button className="btn bg-primary btn-block">
                       View cart
                     </button>
+                    </Link>
+                   
                   </div>
                 </div>
               </div>
             </div>
 
-            
             <div className="dropdown dropdown-end">
-                
-              {/* {!userId &&(<>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-              >
-                
-                <li>
-                  <Link href={"/sign-up"} className="justify-between hover:bg-primary">
-                    Sign Up
-                    <span className="badge">New</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/sign-in"} className="justify-between hover:bg-primary">
-                    Sign In
-                  </Link>
-                </li>
-              </ul>
-              </>)}
-              <SignOutButton afterSignOutUrl="/"/> */}
-                
-              {!userId ? (
+              {!user ? (
                 <>
-                <div
-                  tabIndex={0}
-                  role="button"
-                  className="btn btn-ghost btn-circle avatar hover:bg-primary"
-                >
-                  <div className="w-10 rounded-full">
-                    <FaUserCircle
-                      className="ml-[0.15rem] mt-[0.15rem]"
-                      size={35}
-                    />
-                    
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="btn btn-ghost btn-circle avatar hover:bg-primary"
+                  >
+                    <div className="w-10 rounded-full">
+                      <FaUserCircle
+                        className="ml-[0.15rem] mt-[0.15rem]"
+                        size={35}
+                      />
+                    </div>
                   </div>
-                </div>
-              
-              <ul tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                <li>
-                  <Link href="/sign-in" className="justify-between hover:bg-primary">Sign In</Link>
-                </li>
-                <li>
-                  <Link href="/sign-up" className="justify-between hover:bg-primary">Sign Up</Link>
-                </li>
-                </ul>
+
+                  <ul
+                    tabIndex={0}
+                    className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                  >
+                    <li>
+                      <Link href="/sign-in" className="justify-between hover:bg-primary">
+                        Sign In
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/sign-up" className="justify-between hover:bg-primary">
+                        Sign Up
+                      </Link>
+                    </li>
+                  </ul>
                 </>
-              
-          ) : (
-            
-            <UserButton showName />
-           
-          )}
-        
-
-
-
+              ) : (
+                <UserButton showName />
+              )}
             </div>
           </div>
         </div>
@@ -152,4 +131,5 @@ const Header = () => {
     </header>
   );
 };
+
 export default Header;
