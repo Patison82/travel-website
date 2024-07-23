@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
+
 import { useState } from "react";
 import { LiaPlaneDepartureSolid, LiaPlaneArrivalSolid } from "react-icons/lia";
-import GifBackground from "./GifBackground";
 
 const FlightSearchForm = () => {
   // const [tripType, setTripType] = useState("return"); // State for trip type (return or one-way)
@@ -50,7 +51,12 @@ const FlightSearchForm = () => {
    };
 
   return (
-    <GifBackground className="flex items-center justify-center h-screen">
+
+    <div
+      className="inset-0 z-0 bg-cover bg-center h-full w-full py-4 px-4"
+      style={{ backgroundImage: "url('/background1.gif')" }}
+    >
+
       <div className="bg-gradient-to-tr from-tertiary to-secondaryAccent   p-10 rounded-badge    max-w-6xl mx-auto mt-8 sm:mb-10  sm:bottom-0 sm:left-0 sm:right-0">
         {/* Title Section */}
         <h2 className=" text-4xl font-semibold mb-6 text-primary text-center sm:text-4xl ">
@@ -65,6 +71,7 @@ const FlightSearchForm = () => {
         </h2>
 
         {/* Trip Type Section */}
+
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col mb-8 sm:space-x-10 sm:flex-row sm:space-y-0 ">
             <label className="inline-flex  items-center text-black">
@@ -238,9 +245,10 @@ const FlightSearchForm = () => {
           </div>
         </form>
       </div>
-    </GifBackground>
-  );
-};
 
+   
+                
+
+      
 export default FlightSearchForm;
 
