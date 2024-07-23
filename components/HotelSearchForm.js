@@ -1,5 +1,6 @@
 "use client";
-
+import GifBackground from "./GifBackground";
+import Link from "next/link";
 const HotelSearchForm = () => {
   return (
     <div
@@ -58,9 +59,11 @@ const HotelSearchForm = () => {
 
         {/* Search Button Section */}
         <div className="flex justify-center mt-6 relative">
+        <Link href="/hotels">
           <button className="px-[5rem] py-3 text-lg bg-primary text-black font-semibold rounded-lg hover:bg-tertiary transition duration-300 shadow-lg">
             Search Hotels
           </button>
+          </Link>
         </div>
       </div>
     </div>

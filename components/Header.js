@@ -28,16 +28,6 @@ const Header = () => {
             <li className="btn btn-ghost text-[1rem] hidden hover:bg-primary sm:flex">
               <Link href="/about">About</Link>
             </li>
-            <li className="btn btn-ghost text-[1rem] hover:bg-primary">
-
-              Flights
-
-             <Link href="/flights">flights</Link>
-
-            </li>
-            <li className="btn btn-ghost text-[1rem] hover:bg-primary">
-              <Link href="/hotels">Hotels</Link>
-            </li>
             <li>
               <Link href="/contact" passHref={true} legacyBehavior={true}>
                 <a className="btn btn-ghost text-[1rem] hover:bg-primary">Contact</a>

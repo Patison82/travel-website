@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useState } from "react";
 import { LiaPlaneDepartureSolid, LiaPlaneArrivalSolid } from "react-icons/lia";
 
@@ -170,10 +172,12 @@ const FlightSearchForm = () => {
 
         {/*  Search Button Section */}
         <div className="flex justify-end mt-6 relative">
-          <button className="px-6 py-3 text-l bg-primary text-  font-semibold rounded-lg  hover:bg-tertiary transition duration-300 shadow-lg ">
+        <Link href="/flights">
+    <button className="px-6 py-3 text-l bg-primary text-  font-semibold rounded-lg  hover:bg-tertiary transition duration-300 shadow-lg ">
             Search Flights
           </button>
-        </div>
+          </Link>
+  </div>
       </div>
     </div>
   );
