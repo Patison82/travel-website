@@ -1,9 +1,11 @@
 "use client";
-import GifBackground from "./GifBackground";
 
 const HotelSearchForm = () => {
   return (
-    <GifBackground className="flex items-center justify-center h-screen">
+    <div
+      className="inset-0 z-0 bg-cover bg-center h-full w-full py-4 px-4"
+      style={{ backgroundImage: "url('/background1.gif')" }}
+    >
       <div className="bg-gradient-to-tr from-tertiary to-secondaryAccent p-10 rounded-badge max-w-6xl mx-auto mt-8 sm:mb-10 sm:bottom-0 sm:left-0 sm:right-0 z-40">
         {/* Hotel Booking Section */}
         <h3 className="text-3xl font-semibold mb-6 text-primary text-center sm:text-3xl">
@@ -61,7 +63,7 @@ const HotelSearchForm = () => {
           </button>
         </div>
       </div>
-    </GifBackground>
+    </div>
   );
 };
 
