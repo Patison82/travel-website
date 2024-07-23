@@ -4,12 +4,12 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center py-8">
           <div className="md:w-1/3">
             <Link href="/">
-              <div className="cursor-pointer mb-16 md:mb-16">
+              <div className="cursor-pointer mb-16 md:mb-32">
                 <div>
                   <Image
                     className="rounded"
@@ -21,12 +21,12 @@ const Footer = () => {
                 </div>
                 <br />
                 <span className=" text-xl italic ">
-                  Your adventure starts with Pasava!
+                  Your adventure starts with Pavasa!
                 </span>
               </div>
             </Link>
             <nav>
-              <ul className="space-y-4 text-lg">
+              <ul className="space-y-3 text-xl">
                 <li>
                   <Link href="/about">
                     <span className="hover:underline cursor-pointer">
@@ -37,7 +37,7 @@ const Footer = () => {
                 <li>
                   <Link href="/destinations">
                     <span className="hover:underline cursor-pointer">
-                      Destinations
+                      Hot Offer
                     </span>
                   </Link>
                 </li>
@@ -48,21 +48,29 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <Link href="/blog">
-                    <span className="hover:underline cursor-pointer">Blog</span>
-                  </Link>
-                </li>
-                <li>
                   <Link href="/contact">
                     <span className="hover:underline cursor-pointer">
                       Contact
                     </span>
                   </Link>
                 </li>
+                <li>
+                  <Link href="/impressum">
+                    <span className="hover:underline cursor-pointer">
+                      Impressum
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/data-protection">
+                    <span className="hover:underline cursor-pointer">
+                      Datenschutz
+                    </span>
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>
-
           <div className="md:w-1/3">
             <div className="flex flex-col space-y-4">
               <div>
@@ -81,13 +89,13 @@ const Footer = () => {
                 <h2 className="text-lg font-bold">E-mail</h2>
                 <p>Pasava@gmail.com</p>
               </div>
-              <div className="w-full h-64">
+              <div className="w-full  h-64">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4555.145098256289!2d13.483345035442095!3d52.52417839316671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e9ab16b3c6b%3A0x762910f63c9bc487!2sVulkanstra%C3%9Fe%201%2C%2010367%20Berlin%2C%20Germany!5e0!3m2!1sen!2sus!4v1720992302644!5m2!1sen!2sus"
                   height="100%"
                   allowFullScreen=""
                   loading="lazy"
-                  className="border-0"
+                  className="border-0 rounded-lg"
                 ></iframe>
               </div>
             </div>
