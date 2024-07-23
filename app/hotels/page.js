@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 
+
 // hotels + availab.
 const hotels = [
   {
