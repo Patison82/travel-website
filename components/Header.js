@@ -29,7 +29,11 @@ const Header = () => {
               <Link href="/about">About</Link>
             </li>
             <li className="btn btn-ghost text-[1rem] hover:bg-primary">
+
               Flights
+
+             <Link href="/flights">flights</Link>
+
             </li>
             <li className="btn btn-ghost text-[1rem] hover:bg-primary">
               <Link href="/hotels">Hotels</Link>

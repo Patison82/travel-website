@@ -5,7 +5,7 @@ const GifBackground = ({ children }) => {
     <div className="relative w-full hide  overflow-hidden">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/background.gif')" }}
+        style={{ backgroundImage: "url('/background1.gif')" }}
       ></div>
       <div className="relative z-10">{children}</div>
     </div>
