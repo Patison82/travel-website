@@ -39,25 +39,23 @@ const FlightSearchForm = () => {
     e.preventDefault();
     const queryParams = new URLSearchParams(formSearchData).toString();
     try {
-       const response = await fetch(`/api/flights?${queryParams}`);
-    if (!response.ok) {
-       throw new Error(`Error: ${response.statusText}`);
+      const response = await fetch(`/api/flights?${queryParams}`);
+      if (!response.ok) {
+        throw new Error(`Error: ${response.statusText}`);
+      }
+      const flights = await response.json();
+      console.log(flights);
+    } catch (error) {
+      console.error("Error fetching flights:", error);
     }
-    const flights = await response.json();
-    console.log(flights); 
-   } catch (error) { 
-      console.error('Error fetching flights:', error); 
-   }
-   };
+  };
 
   return (
-
     <div
       className="inset-0 z-0 bg-cover bg-center h-full w-full py-4 px-4"
       style={{ backgroundImage: "url('/background1.gif')" }}
     >
-
-      <div className="bg-gradient-to-tr from-tertiary to-secondaryAccent   p-10 rounded-badge    max-w-6xl mx-auto mt-8 sm:mb-10  sm:bottom-0 sm:left-0 sm:right-0">
+      <div className="bg-gradient-to-tr from-tertiary to-secondaryAccent p-10 rounded-badge    max-w-6xl mx-auto mt-8 sm:mb-10  sm:bottom-0 sm:left-0 sm:right-0">
         {/* Title Section */}
         <h2 className=" text-4xl font-semibold mb-6 text-primary text-center sm:text-4xl ">
           {/* Plane Icon */}
@@ -185,19 +183,17 @@ const FlightSearchForm = () => {
             </div>
 
             {/* Return Date (conditionally rendered based on trip type) */}
-            
-              <div className="flex flex-col w-full sm:w-1/4">
-                <label className="font-semibold mb-2 text-gray-800">
-                  Return
-                </label>
-                <input
-                  value={formSearchData.returnDate}
-                  name="returnDate"
-                  onChange={handleChange}
-                  type="date"
-                  className="p-2 border  border-green-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 w-full"
-                />
-              </div>
+
+            <div className="flex flex-col w-full sm:w-1/4">
+              <label className="font-semibold mb-2 text-gray-800">Return</label>
+              <input
+                value={formSearchData.returnDate}
+                name="returnDate"
+                onChange={handleChange}
+                type="date"
+                className="p-2 border  border-green-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 w-full"
+              />
+            </div>
             {/* conditinal bis hier */}
           </div>
 
@@ -245,10 +241,8 @@ const FlightSearchForm = () => {
           </div>
         </form>
       </div>
+    </div>
+  );
+};
 
-   
-                
-
-      
 export default FlightSearchForm;
-
