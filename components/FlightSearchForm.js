@@ -1,54 +1,78 @@
 "use client";
 
-import Link from "next/link";
-
 import { useState } from "react";
 import { LiaPlaneDepartureSolid, LiaPlaneArrivalSolid } from "react-icons/lia";
 
 const FlightSearchForm = () => {
-  // const [tripType, setTripType] = useState("return"); // State for trip type (return or one-way)
-  // const [addNearbyFrom, setAddNearbyFrom] = useState(false); // State for "Add nearby airports" checkbox for departure city
-  // const [addNearbyTo, setAddNearbyTo] = useState(false); // State for "Add nearby airports" checkbox for destination city
-  // const [directFlightsOnly, setDirectFlightsOnly] = useState(false);
-
   const objdata = {
-    return: false,
-    oneWay: true,
-    from: "",
-    to: "",
+    flightReturn: false,
+    oneWay: false,
+    countryFrom: "",
+    countryTo: "",
     departDate: "",
     returnDate: "",
     nearbyAirportFrom: false,
     nearbyAirportTo: false,
     directFlightOnly: false,
     passenger: 1,
-    class: "",
+    travelClass: "",
   };
 
   const [formSearchData, setFormSearchData] = useState(objdata);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+
     setFormSearchData({
       ...formSearchData,
       [name]: type === "checkbox" ? checked : value,
     });
+
+    if (name === "flightReturn") {
+      setFormSearchData((prevState) => ({
+        ...prevState,
+        flightReturn: checked,
+        oneWay: !checked,
+      }));
+    } else if (name === "oneWay") {
+      setFormSearchData((prevState) => ({
+        ...prevState,
+        flightReturn: !checked,
+        oneWay: checked,
+      }));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const queryParams = new URLSearchParams(formSearchData).toString();
+    console.log(formSearchData);
+
+    const filteredData = Object.fromEntries(
+      Object.entries(formSearchData).filter(([key, value]) =>
+        value !== "" ? value.length > 0 : true
+      )
+    );
+
+    const queryParams = new URLSearchParams(filteredData).toString();
+    console.log(queryParams);
     try {
       const response = await fetch(`/api/flights?${queryParams}`);
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
       }
       const flights = await response.json();
-      console.log(flights);
+      console.log("bekommende daten", flights);
     } catch (error) {
       console.error("Error fetching flights:", error);
     }
   };
+
+  //  Validierung bleibt auskommentiert
+  // const filteredData = Object.fromEntries(
+  //   Object.entries(formSearchData).filter(
+  //     ([key, value]) =>
+  //       value !== "" ? value.length > 0 : true)
+  //   )
 
   return (
     <div
@@ -74,9 +98,9 @@ const FlightSearchForm = () => {
           <div className="flex flex-col mb-8 sm:space-x-10 sm:flex-row sm:space-y-0 ">
             <label className="inline-flex  items-center text-black">
               <input
-                name="return"
+                name="flightReturn"
                 type="checkbox"
-                checked={formSearchData.return}
+                checked={formSearchData.flightReturn}
                 onChange={handleChange}
                 className="form-radio text-blue-600"
               />
@@ -86,7 +110,7 @@ const FlightSearchForm = () => {
             <label className="inline-flex items-center text-black">
               <input
                 type="checkbox"
-                name="oneway"
+                name="oneWay"
                 checked={formSearchData.oneWay}
                 onChange={handleChange}
                 className="form-radio text-blue-600"
@@ -101,12 +125,14 @@ const FlightSearchForm = () => {
           <div className="flex flex-col sm:flex-row mb-6 space-y-4 sm:space-y-0 sm:space-x-4">
             <div className="flex flex-col sm:w-1/4 w-full ">
               {/* Departure city */}
-              <label className="font-semibold mb-2 text-gray-800">From</label>
+              <label className="font-semibold mb-2 text-gray-800">
+                Country From
+              </label>
               <div className="relative">
                 <input
-                  name="from"
-                  value={formSearchData.from}
+                  name="countryFrom"
                   onChange={handleChange}
+                  value={formSearchData.countryFrom}
                   type="text"
                   placeholder="Departure city"
                   className="p-2 border  border-green-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 w-full"
@@ -129,12 +155,14 @@ const FlightSearchForm = () => {
             {/* Destination City */}
 
             <div className="flex flex-col sm:w-1/4 w-full">
-              <label className="font-semibold mb-2 text-gray-800">To</label>
+              <label className="font-semibold mb-2 text-gray-800">
+                Country To
+              </label>
               <div className="relative">
                 <input
-                  name="to"
+                  name="countryTo"
                   onChange={handleChange}
-                  value={formSearchData.to}
+                  value={formSearchData.countryTo}
                   type="text"
                   placeholder="Destination city"
                   className="p-2 border  border-green-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 w-full"
@@ -143,7 +171,7 @@ const FlightSearchForm = () => {
                 {/* Checkbox for "Add nearby airports" */}
                 <label className="inline-flex items-center mt-2 text-sm text-gray-600">
                   <input
-                    name="nearbyAirport"
+                    name="nearbyAirportTo"
                     type="checkbox"
                     className="form-checkbox text-blue-600"
                     checked={formSearchData.nearbyAirportTo}
@@ -211,7 +239,6 @@ const FlightSearchForm = () => {
                 onChange={handleChange}
                 type="number"
                 min="1"
-                defaultValue="1"
                 className="p-1.5  border border-green-500 rounded-lg focus:outline-none  focus:ring-3 focus:ring-blue-400 transition duration-300 w-full"
               />
             </div>
@@ -222,8 +249,8 @@ const FlightSearchForm = () => {
               <label className="font-semibold mb-2 text-gray-800">Class</label>
               <select
                 onChange={handleChange}
-                name="class"
-                value={formSearchData.class}
+                name="travelClass"
+                value={formSearchData.travelClass}
                 className="p-2  border border-green-500 rounded-lg focus:outline-none focus:ring-3 focus:ring-blue-500 transition duration-300 w-full"
               >
                 <option value="economy">Economy</option>
