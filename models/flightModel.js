@@ -2,31 +2,33 @@ import mongoose from "mongoose";
 
 const flightSchema = new mongoose.Schema(
   {
-    flightTypeReturn: { type: Boolean, default: true },
-    flightTypeOneWay: { type: Boolean, default: false },
+    // flightTypeReturn: { type: Boolean, default: true },
+    // flightTypeOneWay: { type: Boolean, default: false },
+
+    flightType: { type: String, enum: ["return", "one-way"] },
 
     countryFrom: { type: String, required: true },
     countryTo: { type: String, required: true },
 
-    hinFlugDatum: Date,
-    returnFlightDate: Date,
+    hindatum: { type: Date },
+    zurueckFlugDatum: { teype: Date },
 
     nearbyAirportFrom: { type: Boolean, default: false },
     nearbyAirportTo: { type: Boolean, default: false },
     directFlightOnly: { type: Boolean, default: false },
 
-    passenger: { type: Number, required: true, min: 1, max: 100 },
+    passenger: { type: Number, min: 1, max: 100 },
     travelClass: {
       type: String,
       required: true,
-      enum: ["Economy", "Business", "First"],
+      enum: ["economy", "business", "first"],
     },
 
-    cityFrom: { type: String, required: true },
-    cityTo: { type: String, required: true },
-    airlineName: { type: String, required: true },
-    flightNummer: { type: String, required: true },
-    price: { type: Number, required: true },
+    cityFrom: { type: String },
+    cityTo: { type: String },
+    airlineName: { type: String },
+    flightNummer: { type: String },
+    price: { type: Number },
     priceType: {
       type: String,
       required: true,

@@ -7,14 +7,16 @@ export async function GET(req) {
   const query = url.searchParams;
 
   const queryParams = {
-    flightTypeReturn: query.get("flightTypeReturn"),
-    flightTypeOneWay: query.get("flightTypeOneWay"),
+    // flightTypeReturn: query.get("flightTypeReturn"),
+    // flightTypeOneWay: query.get("flightTypeOneWay"),
+
+    flightType: query.get("flightType"),
 
     countryFrom: query.get("countryFrom"),
     countryTo: query.get("countryTo"),
 
-    hinFlugDatum: query.get("hinFlugDatum"),
-    zurueckFlugDatum: query.get("zurueckFlugDatum"),
+    departDate: query.get("departDate"),
+    returnDate: query.get("returnDate"),
 
     nearbyAirportFrom: query.get("nearbyAirportFrom"),
     nearbyAirportTo: query.get("nearbyAirportTo"),
@@ -27,11 +29,15 @@ export async function GET(req) {
 
   let filter = {};
   // RETURN and One-Way
-  if (queryParams.flightTypeReturn !== null) {
-    filter.flightTypeReturn = queryParams.flightTypeReturn;
-  }
-  if (queryParams.flightTypeOneWay !== null) {
-    filter.flightTypeOneWay = queryParams.flightTypeOneWay;
+  // if (queryParams.flightTypeReturn !== null) {
+  //   filter.flightTypeReturn = queryParams.flightTypeReturn;
+  // }
+  // if (queryParams.flightTypeOneWay !== null) {
+  //   filter.flightTypeOneWay = queryParams.flightTypeOneWay;
+  // }
+
+  if (queryParams.flightType !== null) {
+    filter.flightType = queryParams.flightType;
   }
 
   // From and To
@@ -40,6 +46,7 @@ export async function GET(req) {
       $regex: new RegExp(queryParams.countryFrom, "i"),
     };
   }
+
   if (queryParams.countryTo) {
     filter.countryTo = {
       $regex: new RegExp(queryParams.countryTo, "i"),
@@ -47,20 +54,17 @@ export async function GET(req) {
   }
   //   departDate and returndate
 
-  if (queryParams.hinFlugDatum) {
-    filter.hinFlugDatum = {
-      $gte: new Date(queryParams.hinFlugDatum).toISOString()
+  if (queryParams.departDate !== null) {
+    filter.departDate= {
+      $eq: queryParams.departDate,
     };
   }
-  
-  if (queryParams.zurueckFlugDatum) {
-    filter.zurueckFlugDatum = {
-      $gte: new Date(queryParams.zurueckFlugDatum).toISOString(),
-     
-    };
-  }
-  
 
+  if (queryParams.returnDate !== null) {
+    filter.returnDate = {
+      $eq: queryParams.returnDate,
+    };
+  }
 
   // nearbyAirportFrom and nearbyAirportTo and directFlightOnly
   if (queryParams.directFlightOnly !== null) {
@@ -85,11 +89,9 @@ export async function GET(req) {
     filter.passenger = queryParams.passenger;
   }
 
-  console.log('Final Filter Object:', JSON.stringify(filter, null, 2));
-
-
-  await connectDB();
+  console.log("Final Filter Object:", JSON.stringify(filter, null, 2));
   try {
+    await connectDB();
     const flightsData = await flightModel.find(filter);
     return NextResponse.json({ flightsData }, { status: 200 });
   } catch (error) {

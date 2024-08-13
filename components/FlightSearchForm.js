@@ -1,12 +1,10 @@
 "use client";
-
 import { useState } from "react";
 import { LiaPlaneDepartureSolid, LiaPlaneArrivalSolid } from "react-icons/lia";
 
 const FlightSearchForm = () => {
-  const objdata = {
-    flightReturn: false,
-    oneWay: false,
+  const objData = {
+    flightType: "",
     countryFrom: "",
     countryTo: "",
     departDate: "",
@@ -18,29 +16,14 @@ const FlightSearchForm = () => {
     travelClass: "",
   };
 
-  const [formSearchData, setFormSearchData] = useState(objdata);
+  const [formSearchData, setFormSearchData] = useState(objData);
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-
-    setFormSearchData({
-      ...formSearchData,
+    const { name, type, checked, value } = e.target;
+    setFormSearchData((prevState) => ({
+      ...prevState,
       [name]: type === "checkbox" ? checked : value,
-    });
-
-    if (name === "flightReturn") {
-      setFormSearchData((prevState) => ({
-        ...prevState,
-        flightReturn: checked,
-        oneWay: !checked,
-      }));
-    } else if (name === "oneWay") {
-      setFormSearchData((prevState) => ({
-        ...prevState,
-        flightReturn: !checked,
-        oneWay: checked,
-      }));
-    }
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -48,8 +31,11 @@ const FlightSearchForm = () => {
     console.log(formSearchData);
 
     const filteredData = Object.fromEntries(
-      Object.entries(formSearchData).filter(([key, value]) =>
-        value !== "" ? value.length > 0 : true
+      Object.entries(formSearchData).filter(
+        ([key, value]) =>
+          (typeof value === "string" && value.trim() !== "") ||
+          (typeof value === "boolean" && value === true) ||
+          (typeof value === "number" && value !== 0)
       )
     );
 
@@ -66,13 +52,6 @@ const FlightSearchForm = () => {
       console.error("Error fetching flights:", error);
     }
   };
-
-  //  Validierung bleibt auskommentiert
-  // const filteredData = Object.fromEntries(
-  //   Object.entries(formSearchData).filter(
-  //     ([key, value]) =>
-  //       value !== "" ? value.length > 0 : true)
-  //   )
 
   return (
     <div
@@ -92,15 +71,16 @@ const FlightSearchForm = () => {
           </div>
         </h2>
 
-        {/* Trip Type Section */}
+        {/* Flight Type Section */}
 
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col mb-8 sm:space-x-10 sm:flex-row sm:space-y-0 ">
             <label className="inline-flex  items-center text-black">
               <input
-                name="flightReturn"
-                type="checkbox"
-                checked={formSearchData.flightReturn}
+                type="radio"
+                name="flightType"
+                value="return"
+                checked={formSearchData.flightType === "return"}
                 onChange={handleChange}
                 className="form-radio text-blue-600"
               />
@@ -109,9 +89,10 @@ const FlightSearchForm = () => {
             </label>
             <label className="inline-flex items-center text-black">
               <input
-                type="checkbox"
-                name="oneWay"
-                checked={formSearchData.oneWay}
+                type="radio"
+                name="flightType"
+                value="one-way"
+                checked={formSearchData.flightType === "one-way"}
                 onChange={handleChange}
                 className="form-radio text-blue-600"
               />
@@ -134,7 +115,7 @@ const FlightSearchForm = () => {
                   onChange={handleChange}
                   value={formSearchData.countryFrom}
                   type="text"
-                  placeholder="Departure city"
+                  placeholder="Departure country"
                   className="p-2 border  border-green-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 w-full"
                 />
 
@@ -164,7 +145,7 @@ const FlightSearchForm = () => {
                   onChange={handleChange}
                   value={formSearchData.countryTo}
                   type="text"
-                  placeholder="Destination city"
+                  placeholder="Destination country"
                   className="p-2 border  border-green-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 w-full"
                 />
 
@@ -184,7 +165,9 @@ const FlightSearchForm = () => {
 
             {/* Departure Date */}
             <div className="flex flex-col sm:w-1/4 w-full">
-              <label className="font-semibold mb-2 text-gray-800">Depart</label>
+              <label className="font-semibold mb-2 text-gray-800">
+                Depart Date
+              </label>
               <input
                 value={formSearchData.departDate}
                 name="departDate"
@@ -213,7 +196,9 @@ const FlightSearchForm = () => {
             {/* Return Date (conditionally rendered based on trip type) */}
 
             <div className="flex flex-col w-full sm:w-1/4">
-              <label className="font-semibold mb-2 text-gray-800">Return</label>
+              <label className="font-semibold mb-2 text-gray-800">
+                Return Date
+              </label>
               <input
                 value={formSearchData.returnDate}
                 name="returnDate"
