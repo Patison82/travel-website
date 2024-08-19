@@ -234,11 +234,15 @@ const FlightSearchForm = () => {
           </div>
 
           {/*  Search Button Section */}
+          
           <div className="flex justify-end mt-6 relative">
+          <Link href="/flights">
             <button className="px-6 py-3 text-l bg-primary text-  font-semibold rounded-lg  hover:bg-tertiary transition duration-300 shadow-lg ">
               Search Flights
             </button>
+            </Link>
           </div>
+          
         </form>
       </div>
     </div>
