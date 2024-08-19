@@ -1,7 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useRef } from "react";
-import Link from "next/link";
+import{ useRef } from "react";
+
 
 export default function Parallax() {
   const ref = useRef(null);
@@ -24,9 +24,7 @@ export default function Parallax() {
       >
         <h1>Pavasa Travel Service</h1>
       </motion.div>
-      <button className="z-40 font-bold text-3xl bg-gradient-to-tr from-primary to-secondary p-3 lg:w-1/10 w-1/10 rounded-2xl">
-        <a href="login">Sign in</a>
-      </button>
+     
 
       <motion.div
         className="absolute inset-0 z-10"
