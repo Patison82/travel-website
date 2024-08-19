@@ -1,7 +1,8 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
-import Link from "next/link";
+// import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 export default function Parallax() {
   const ref = useRef(null);
@@ -9,6 +10,8 @@ export default function Parallax() {
     target: ref,
     offset: ["start start", "end start"],
   });
+
+  const { t } = useTranslation();
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0", "200%"]);
@@ -22,10 +25,10 @@ export default function Parallax() {
         style={{ y: textY }}
         className="font-bold text-white text-5xl md:text-7xl relative z-30 drop-shadow-2xl w-full lg:w-1/2 text-center"
       >
-        <h1>Pavasa Travel Service</h1>
+        <h1>{t("header")}</h1>
       </motion.div>
       <button className="z-40 font-bold text-3xl bg-gradient-to-tr from-primary to-secondary p-3 lg:w-1/10 w-1/10 rounded-2xl">
-        <a href="login">Sign in</a>
+        <a href="sign-in">{t("Sign_in_button")}</a>
       </button>
 
       <motion.div
