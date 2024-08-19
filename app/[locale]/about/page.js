@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+// import { useTranslation } from "next-i18next";
 
 const stats = [
   { id: 1, name: "Experience", value: "13 years" },
@@ -10,6 +12,7 @@ const stats = [
 ];
 
 export default function AboutUs() {
+  // const { t } = useTranslation();
   return (
     <div
       className="bg-gray-100 p-8"

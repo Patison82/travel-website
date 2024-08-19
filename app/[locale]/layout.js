@@ -25,8 +25,10 @@ export default function RootLayout({ children }) {
       <RecoilRoot>
         
       <html lang="en">
-        <body className={`${inter.className} bg-primary`}
-suppressHydrationWarning={true}>
+        <body
+          className={`${inter.className} bg-primary`}
+          suppressHydrationWarning={true}
+        >
           <Header />
           <main>{children}</main>
           <Toaster position="bottom-center"/>
@@ -36,6 +38,5 @@ suppressHydrationWarning={true}>
       </html>
       </RecoilRoot>
     </ClerkProvider>
-
   );
 }
