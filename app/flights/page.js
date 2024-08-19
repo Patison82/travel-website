@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 
 const airlines = [
@@ -147,6 +148,26 @@ const flights = [
 
 //filter
 function FlightsPage() {
+
+  const [flights, setFlights] = useState([]);
+  const searchParams = useSearchParams();
+  const countryFrom = searchParams.get("countryFrom") || '';
+  const countryTo = searchParams.get("countryTo") || '';
+
+  useEffect(() => {
+    const fetchFlights = async () => {
+      const response = await fetch(`/api/flights?countryFrom=${countryFrom}&countryTo=${countryTo}`);
+      const data = await response.json();
+      setFlights(data.flightsData);
+    };
+
+    if (countryFrom || countryTo) {
+      fetchFlights();
+    }
+  }, [countryFrom, countryTo]);
+
+  console.log(flights);
+
   const [selectedBaggage, setSelectedBaggage] = useState('All');
   const [selectedStops, setSelectedStops] = useState('All');
   const [selectedAirlines, setSelectedAirlines] = useState([]);

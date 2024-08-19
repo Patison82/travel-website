@@ -1,0 +1,34 @@
+[
+  {
+    "flightTypeReturn": true,
+    "flightTypeOneWay": false,
+    "countryFrom": "Germany",
+    "countryTo": "USA",
+    "departDate": {
+      "airport": "TXL",
+      "time": "2024-08-10T12:00:00Z"
+    },
+    "returnDate": {
+      "airport": "FCO",
+      "time": "2024-09-10T12:00:00Z"
+    },
+    "nearbyAirportFrom": false,
+    "nearbyAirportTo": false,
+    "directFlightOnly": false,
+    "passenger": 1,
+    "travelClass": "Economy",
+    "cityFrom": "Berlin",
+    "cityTo": "New York",
+    "airlineName": "Airline One",
+    "flightNummer": "A123",
+    "price": 200,
+    "priceType": "adult",
+    "totalPassenger": 180,
+    "flightDurationDepart": 120,
+    "flightDurationReturn": 80
+  }
+ 
+]
+
+
+
