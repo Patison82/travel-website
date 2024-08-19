@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useState } from "react";
+import Link from "next/link";
 import { LiaPlaneDepartureSolid, LiaPlaneArrivalSolid } from "react-icons/lia";
 
 const FlightSearchForm = () => {
@@ -13,40 +13,51 @@ const FlightSearchForm = () => {
 
   const { t } = useTranslation();
 
-  const objdata = {
-    return: false,
-    oneWay: true,
-    from: "",
-    to: "",
+  const objData = {
+    flightType: "",
+    countryFrom: "",
+    countryTo: "",
     departDate: "",
     returnDate: "",
     nearbyAirportFrom: false,
     nearbyAirportTo: false,
     directFlightOnly: false,
     passenger: 1,
-    class: "",
+    travelClass: "",
   };
 
-  const [formSearchData, setFormSearchData] = useState(objdata);
+  const [formSearchData, setFormSearchData] = useState(objData);
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormSearchData({
-      ...formSearchData,
+    const { name, type, checked, value } = e.target;
+    setFormSearchData((prevState) => ({
+      ...prevState,
       [name]: type === "checkbox" ? checked : value,
-    });
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const queryParams = new URLSearchParams(formSearchData).toString();
+    console.log(formSearchData);
+
+    const filteredData = Object.fromEntries(
+      Object.entries(formSearchData).filter(
+        ([key, value]) =>
+          (typeof value === "string" && value.trim() !== "") ||
+          (typeof value === "boolean" && value === true) ||
+          (typeof value === "number" && value !== 0)
+      )
+    );
+
+    const queryParams = new URLSearchParams(filteredData).toString();
+    console.log(queryParams);
     try {
       const response = await fetch(`/api/flights?${queryParams}`);
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
       }
       const flights = await response.json();
-      console.log(flights);
+      console.log("bekommende daten", flights);
     } catch (error) {
       console.error("Error fetching flights:", error);
     }
@@ -70,15 +81,16 @@ const FlightSearchForm = () => {
           </div>
         </h2>
 
-        {/* Trip Type Section */}
+        {/* Flight Type Section */}
 
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col mb-8 sm:space-x-10 sm:flex-row sm:space-y-0 ">
             <label className="inline-flex  items-center text-black">
               <input
-                name="return"
-                type="checkbox"
-                checked={formSearchData.return}
+                type="radio"
+                name="flightType"
+                value="return"
+                checked={formSearchData.flightType === "return"}
                 onChange={handleChange}
                 className="form-radio text-blue-600"
               />
@@ -87,9 +99,10 @@ const FlightSearchForm = () => {
             </label>
             <label className="inline-flex items-center text-black">
               <input
-                type="checkbox"
-                name="oneway"
-                checked={formSearchData.oneWay}
+                type="radio"
+                name="flightType"
+                value="one-way"
+                checked={formSearchData.flightType === "one-way"}
                 onChange={handleChange}
                 className="form-radio text-blue-600"
               />
@@ -108,11 +121,11 @@ const FlightSearchForm = () => {
               </label>
               <div className="relative">
                 <input
-                  name="from"
-                  value={formSearchData.from}
+                  name="countryFrom"
                   onChange={handleChange}
+                  value={formSearchData.countryFrom}
                   type="text"
-                  placeholder="Departure city"
+                  placeholder="Departure country"
                   className="p-2 border  border-green-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 w-full"
                 />
 
@@ -140,18 +153,18 @@ const FlightSearchForm = () => {
               </label>
               <div className="relative">
                 <input
-                  name="to"
+                  name="countryTo"
                   onChange={handleChange}
-                  value={formSearchData.to}
+                  value={formSearchData.countryTo}
                   type="text"
-                  placeholder="Destination city"
+                  placeholder="Destination country"
                   className="p-2 border  border-green-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 w-full"
                 />
 
                 {/* Checkbox for "Add nearby airports" */}
                 <label className="inline-flex items-center mt-2 text-sm text-gray-600">
                   <input
-                    name="nearbyAirport"
+                    name="nearbyAirportTo"
                     type="checkbox"
                     className="form-checkbox text-blue-600"
                     checked={formSearchData.nearbyAirportTo}
@@ -225,7 +238,6 @@ const FlightSearchForm = () => {
                 onChange={handleChange}
                 type="number"
                 min="1"
-                defaultValue="1"
                 className="p-1.5  border border-green-500 rounded-lg focus:outline-none  focus:ring-3 focus:ring-blue-400 transition duration-300 w-full"
               />
             </div>
@@ -238,8 +250,8 @@ const FlightSearchForm = () => {
               </label>
               <select
                 onChange={handleChange}
-                name="class"
-                value={formSearchData.class}
+                name="travelClass"
+                value={formSearchData.travelClass}
                 className="p-2  border border-green-500 rounded-lg focus:outline-none focus:ring-3 focus:ring-blue-500 transition duration-300 w-full"
               >
                 <option value="economy">Economy</option>
@@ -250,10 +262,13 @@ const FlightSearchForm = () => {
           </div>
 
           {/*  Search Button Section */}
+
           <div className="flex justify-end mt-6 relative">
-            <button className="px-6 py-3 text-l bg-primary text-  font-semibold rounded-lg  hover:bg-tertiary transition duration-300 shadow-lg ">
-              {t("form_searchflights")}
-            </button>
+            <Link href="/flights">
+              <button className="px-6 py-3 text-l bg-primary text-  font-semibold rounded-lg  hover:bg-tertiary transition duration-300 shadow-lg ">
+                {t("form_searchflights")}
+              </button>
+            </Link>
           </div>
         </form>
       </div>

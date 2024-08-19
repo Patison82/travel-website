@@ -1,4 +1,6 @@
 // app/api/checkout_sessions/route.js
+
+
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
@@ -6,23 +8,37 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export async function POST(req) {
   try {
+    const body = await req.json();  // Asynchron den Request Body lesen
+    const items = body.cartItem;  // Es sollte 'cartItem' sein, nicht 'cardItem'
+
+    console.log(items);
+
+    const transformedItems = items.map((item) => ({
+      price_data: {
+        currency: "usd",
+        product_data: {  // Verwende 'product_data' anstelle von 'hotel_data'
+          name: item.name,
+          images: [item.image],  // Hier kein Origin erforderlich
+        },
+        unit_amount: item.price * 100,
+      },
+      quantity: item.Quantity,  // Verwende 'Quantity' (wenn es großgeschrieben ist)
+    }));
+
     const { origin } = new URL(req.url);
+
     // Create Checkout Sessions from body params.
     const session = await stripe.checkout.sessions.create({
-      line_items: [
-        {
-          // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-          price: 'price_1PdqQRFQn13QZEjzdze1Ie9W',
-          quantity: 2,
-        },
-      ],
+      line_items: transformedItems,
       mode: 'payment',
-      success_url: `${origin}/?success=true`,
-      cancel_url: `${origin}/?canceled=true`,
+      success_url: `${origin}/success`,
+      cancel_url: `${origin}/`,
     });
-    return NextResponse.redirect(session.url, 303);
+
+    return NextResponse.json({ sessionURL: session.url });
   } catch (err) {
     console.error('Error creating Stripe session:', err);
     return NextResponse.json({ error: err.message }, { status: err.statusCode || 500 });
   }
 }
+
