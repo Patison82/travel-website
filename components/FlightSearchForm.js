@@ -3,7 +3,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { LiaPlaneDepartureSolid, LiaPlaneArrivalSolid } from "react-icons/lia";
 
-const FlightSearchForm = () => {
+
+
+const FlightSearchForm = async() => {
   const objData = {
     flightType: "",
     countryFrom: "",
@@ -53,6 +55,8 @@ const FlightSearchForm = () => {
       console.error("Error fetching flights:", error);
     }
   };
+
+  
 
   return (
     <div
