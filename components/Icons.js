@@ -1,10 +1,16 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const Icon = ({ icon, title, description, link }) => {
   return (
     <div className="flex flex-col items-center text-center">
-      <Link href={link} className="bg-teal-400 rounded-full p-6 mb-4 text-white flex items-center justify-center">
+      <Link
+        href={link}
+        className="bg-teal-400 rounded-full p-6 mb-4 text-white flex items-center justify-center"
+      >
         <div
           dangerouslySetInnerHTML={{ __html: icon }}
           className="h-8 w-8 text-white cursor-pointer"
@@ -44,11 +50,10 @@ const Icons = () => {
     },
   ];
 
+  const { t } = useTranslation();
   return (
     <div className="py-16">
-      <h2 className="text-3xl font-bold text-center mb-12">
-        WHY PAVASA TRAVEL SERVICES ?
-      </h2>
+      <h2 className="text-3xl font-bold text-center mb-12">{t("icons")}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {icons.map((item, index) => (
           <Icon key={index} {...item} />

@@ -1,6 +1,9 @@
+
 'use client'
 import Link from "next/link";
 import { useEffect,useState } from "react";
+
+
 
 const stats = [
   { id: 1, name: "Experience", value: "13 years" },
@@ -11,13 +14,16 @@ const stats = [
   { id: 6, name: "New clients annually", value: "46,000" },
 ];
 
-export default async function AboutUs() {
  
  
 
  
 
   
+
+export default function AboutUs() {
+  // const { t } = useTranslation();
+
   return (
 
     <div
