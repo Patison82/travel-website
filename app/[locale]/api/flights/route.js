@@ -3,12 +3,11 @@ import connectDB from "@/utils/database/connectDB";
 import { NextResponse } from "next/server";
 
 export async function GET(req) {
+
   const url = new URL(req.url);
   const query = url.searchParams;
 
   const queryParams = {
-    // flightTypeReturn: query.get("flightTypeReturn"),
-    // flightTypeOneWay: query.get("flightTypeOneWay"),
 
     flightType: query.get("flightType"),
 
@@ -28,13 +27,7 @@ export async function GET(req) {
   // console.log('Object',queryParams);
 
   let filter = {};
-  // RETURN and One-Way
-  // if (queryParams.flightTypeReturn !== null) {
-  //   filter.flightTypeReturn = queryParams.flightTypeReturn;
-  // }
-  // if (queryParams.flightTypeOneWay !== null) {
-  //   filter.flightTypeOneWay = queryParams.flightTypeOneWay;
-  // }
+
 
   if (queryParams.flightType !== null) {
     filter.flightType = queryParams.flightType;
@@ -89,7 +82,7 @@ export async function GET(req) {
     filter.passenger = queryParams.passenger;
   }
 
-  console.log("Final Filter Object:", JSON.stringify(filter, null, 2));
+  // console.log("Final Filter Object:", JSON.stringify(filter, null, 2));
   try {
     await connectDB();
     const flightsData = await flightModel.find(filter);
