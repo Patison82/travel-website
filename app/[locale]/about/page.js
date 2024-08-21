@@ -1,7 +1,7 @@
 
 'use client'
 import Link from "next/link";
-import { useEffect,useState } from "react";
+
 
 
 
@@ -33,7 +33,7 @@ export default function AboutUs() {
           rgba(255, 255, 255, 0.8), 
           rgba(255, 255, 255, 0.8)
         ), 
-        url('/path/to/your/background-image.jpg')`,
+        url('')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

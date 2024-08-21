@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { LiaPlaneDepartureSolid, LiaPlaneArrivalSolid } from "react-icons/lia";
 
+
 const FlightSearchForm = () => {
   // const [tripType, setTripType] = useState("return"); // State for trip type (return or one-way)
   // const [addNearbyFrom, setAddNearbyFrom] = useState(false); // State for "Add nearby airports" checkbox for departure city
@@ -12,6 +13,7 @@ const FlightSearchForm = () => {
   // const [directFlightsOnly, setDirectFlightsOnly] = useState(false);
 
   const { t } = useTranslation();
+
 
   const objData = {
     flightType: "",
@@ -36,7 +38,7 @@ const FlightSearchForm = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     console.log(formSearchData);
 
