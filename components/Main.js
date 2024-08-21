@@ -24,7 +24,7 @@ export default function Parallax() {
     >
       <motion.div
         style={{ y: textY }}
-        className="font-bold text-white text-5xl md:text-7xl relative z-30 drop-shadow-2xl w-full lg:w-1/2 text-center"
+        className="font-bold text-white text-5xl md:text-7xl relative z-30 drop-shadow-2xl w-full lg:w-full text-center"
       >
         <h1>{t("header")}</h1>
       </motion.div>

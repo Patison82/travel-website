@@ -5,11 +5,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { LiaPlaneDepartureSolid, LiaPlaneArrivalSolid } from "react-icons/lia";
 
-<<<<<<< HEAD
-
-
-const FlightSearchForm = async() => {
-=======
 const FlightSearchForm = () => {
   // const [tripType, setTripType] = useState("return"); // State for trip type (return or one-way)
   // const [addNearbyFrom, setAddNearbyFrom] = useState(false); // State for "Add nearby airports" checkbox for departure city
@@ -18,7 +13,6 @@ const FlightSearchForm = () => {
 
   const { t } = useTranslation();
 
->>>>>>> main
   const objData = {
     flightType: "",
     countryFrom: "",
@@ -68,8 +62,6 @@ const FlightSearchForm = () => {
       console.error("Error fetching flights:", error);
     }
   };
-
-  
 
   return (
     <div
