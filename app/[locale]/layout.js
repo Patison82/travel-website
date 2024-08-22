@@ -25,10 +25,7 @@ export default function RootLayout({ children }) {
       <RecoilRoot>
         
       <html lang="en">
-<<<<<<< HEAD:app/layout.js
-=======
 
->>>>>>> main:app/[locale]/layout.js
         <body className={`${inter.className} `}
 suppressHydrationWarning={true}>
 
