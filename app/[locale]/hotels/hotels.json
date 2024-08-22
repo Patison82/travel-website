@@ -1,0 +1,1436 @@
+[
+  {
+    "name": "Hotel One",
+    "rezension": {
+      "rating": 4.5,
+      "comment": "Great service and comfortable rooms."
+    },
+    "address": {
+      "street": "123 Main St",
+      "zip": 12345,
+      "city": "Berlin",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 1234567890,
+      "email": "contact@hotelone.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 150,
+    "website": "http://www.hotelone.com",
+    "image": "../assets/images/hotel1.jpg",
+    "bookNow": "http://www.hotelone.com/book",
+    "countGuest": 100,
+    "totalGuest": 200,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Two",
+    "rezension": {
+      "rating": 4.0,
+      "comment": "Nice location and friendly staff."
+    },
+    "address": {
+      "street": "456 Oak St",
+      "zip": 54321,
+      "city": "Munich",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 2345678901,
+      "email": "contact@hoteltwo.com"
+    },
+    "hotelClass": "Standard",
+    "costPerNight": 120,
+    "website": "http://www.hoteltwo.com",
+    "image": "../assets/images/hotel2.jpg",
+    "bookNow": "http://www.hoteltwo.com/book",
+    "countGuest": 80,
+    "totalGuest": 150,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Three",
+    "rezension": {
+      "rating": 3.5,
+      "comment": "Affordable and clean."
+    },
+    "address": {
+      "street": "789 Pine St",
+      "zip": 67890,
+      "city": "Hamburg",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 3456789012,
+      "email": "contact@hotelthree.com"
+    },
+    "hotelClass": "Suite",
+    "costPerNight": 180,
+    "website": "http://www.hotelthree.com",
+    "image": "../assets/images/hotel3.jpg",
+    "bookNow": "http://www.hotelthree.com/book",
+    "countGuest": 50,
+    "totalGuest": 100,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": false,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Four",
+    "rezension": {
+      "rating": 5.0,
+      "comment": "Excellent amenities and great food."
+    },
+    "address": {
+      "street": "101 Maple St",
+      "zip": 98765,
+      "city": "Frankfurt",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 4567890123,
+      "email": "contact@hotelfour.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 200,
+    "website": "http://www.hotelfour.com",
+    "image": "../assets/images/hotel4.jpg",
+    "bookNow": "http://www.hotelfour.com/book",
+    "countGuest": 120,
+    "totalGuest": 200,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Five",
+    "rezension": {
+      "rating": 3.0,
+      "comment": "Decent stay for the price."
+    },
+    "address": {
+      "street": "202 Birch St",
+      "zip": 11223,
+      "city": "Stuttgart",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 5678901234,
+      "email": "contact@hotelfive.com"
+    },
+    "hotelClass": "Standard",
+    "costPerNight": 100,
+    "website": "http://www.hotelfive.com",
+    "image": "../assets/images/hotel5.jpg",
+    "bookNow": "http://www.hotelfive.com/book",
+    "countGuest": 90,
+    "totalGuest": 150,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": false,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Six",
+    "rezension": {
+      "rating": 4.8,
+      "comment": "Luxurious experience with top-notch service."
+    },
+    "address": {
+      "street": "303 Cedar St",
+      "zip": 33445,
+      "city": "Dusseldorf",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 6789012345,
+      "email": "contact@hotelsix.com"
+    },
+    "hotelClass": "Suite",
+    "costPerNight": 250,
+    "website": "http://www.hotelsix.com",
+    "image": "../assets/images/hotel6.jpg",
+    "bookNow": "http://www.hotelsix.com/book",
+    "countGuest": 70,
+    "totalGuest": 100,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Seven",
+    "rezension": {
+      "rating": 4.2,
+      "comment": "Comfortable and well-located."
+    },
+    "address": {
+      "street": "404 Elm St",
+      "zip": 55667,
+      "city": "Cologne",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 7890123456,
+      "email": "contact@hotelseven.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 160,
+    "website": "http://www.hotelseven.com",
+    "image": "../assets/images/hotel7.jpg",
+    "bookNow": "http://www.hotelseven.com/book",
+    "countGuest": 85,
+    "totalGuest": 200,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Eight",
+    "rezension": {
+      "rating": 3.8,
+      "comment": "Good value for money."
+    },
+    "address": {
+      "street": "505 Spruce St",
+      "zip": 77889,
+      "city": "Leipzig",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 8901234567,
+      "email": "contact@hoteeight.com"
+    },
+    "hotelClass": "Standard",
+    "costPerNight": 110,
+    "website": "http://www.hoteeight.com",
+    "image": "../assets/images/hotel8.jpg",
+    "bookNow": "http://www.hoteeight.com/book",
+    "countGuest": 65,
+    "totalGuest": 150,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": false,
+    "haSwimpool": false,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Nine",
+    "rezension": {
+      "rating": 4.7,
+      "comment": "Exceptional service and facilities."
+    },
+    "address": {
+      "street": "606 Aspen St",
+      "zip": 99000,
+      "city": "Dortmund",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 9012345678,
+      "email": "contact@hotelni.com"
+    },
+    "hotelClass": "Suite",
+    "costPerNight": 220,
+    "website": "http://www.hotelni.com",
+    "image": "../assets/images/hotel9.jpg",
+    "bookNow": "http://www.hotelni.com/book",
+    "countGuest": 40,
+    "totalGuest": 100,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Ten",
+    "rezension": {
+      "rating": 4.3,
+      "comment": "Pleasant stay with good amenities."
+    },
+    "address": {
+      "street": "707 Redwood St",
+      "zip": 11111,
+      "city": "Bremen",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 1234567890,
+      "email": "contact@hotelten.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 170,
+    "website": "http://www.hotelten.com",
+    "image": "../assets/images/hotel10.jpg",
+    "bookNow": "http://www.hotelten.com/book",
+    "countGuest": 75,
+    "totalGuest": 200,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Eleven",
+    "rezension": {
+      "rating": 4.0,
+      "comment": "Convenient location and friendly staff."
+    },
+    "address": {
+      "street": "808 Willow St",
+      "zip": 22222,
+      "city": "Hannover",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 2345678901,
+      "email": "contact@hoteleven.com"
+    },
+    "hotelClass": "Standard",
+    "costPerNight": 140,
+    "website": "http://www.hoteleven.com",
+    "image": "../assets/images/hotel11.jpg",
+    "bookNow": "http://www.hoteleven.com/book",
+    "countGuest": 60,
+    "totalGuest": 150,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Twelve",
+    "rezension": {
+      "rating": 4.6,
+      "comment": "Luxurious rooms and excellent food."
+    },
+    "address": {
+      "street": "909 Chestnut St",
+      "zip": 33333,
+      "city": "Nuremberg",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 3456789012,
+      "email": "contact@hotwelve.com"
+    },
+    "hotelClass": "Suite",
+    "costPerNight": 230,
+    "website": "http://www.hotwelve.com",
+    "image": "../assets/images/hotel12.jpg",
+    "bookNow": "http://www.hotwelve.com/book",
+    "countGuest": 85,
+    "totalGuest": 100,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Thirteen",
+    "rezension": {
+      "rating": 3.9,
+      "comment": "Affordable and clean."
+    },
+    "address": {
+      "street": "1010 Alder St",
+      "zip": 44444,
+      "city": "Duisburg",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 4567890123,
+      "email": "contact@hotthirteen.com"
+    },
+    "hotelClass": "Standard",
+    "costPerNight": 130,
+    "website": "http://www.hotthirteen.com",
+    "image": "../assets/images/hotel13.jpg",
+    "bookNow": "http://www.hotthirteen.com/book",
+    "countGuest": 70,
+    "totalGuest": 150,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Fourteen",
+    "rezension": {
+      "rating": 4.4,
+      "comment": "Great service and comfortable rooms."
+    },
+    "address": {
+      "street": "1111 Beech St",
+      "zip": 55555,
+      "city": "Bochum",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 5678901234,
+      "email": "contact@hotfourteen.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 160,
+    "website": "http://www.hotfourteen.com",
+    "image": "../assets/images/hotel14.jpg",
+    "bookNow": "http://www.hotfourteen.com/book",
+    "countGuest": 80,
+    "totalGuest": 200,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Fifteen",
+    "rezension": {
+      "rating": 3.5,
+      "comment": "Nice location and friendly staff."
+    },
+    "address": {
+      "street": "1212 Pinecone St",
+      "zip": 66666,
+      "city": "Wuppertal",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 6789012345,
+      "email": "contact@hotfifteen.com"
+    },
+    "hotelClass": "Standard",
+    "costPerNight": 120,
+    "website": "http://www.hotfifteen.com",
+    "image": "../assets/images/hotel15.jpg",
+    "bookNow": "http://www.hotfifteen.com/book",
+    "countGuest": 65,
+    "totalGuest": 150,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Sixteen",
+    "rezension": {
+      "rating": 4.1,
+      "comment": "Affordable and clean."
+    },
+    "address": {
+      "street": "1313 Cypress St",
+      "zip": 77777,
+      "city": "Bielefeld",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 7890123456,
+      "email": "contact@hotsixteen.com"
+    },
+    "hotelClass": "Suite",
+    "costPerNight": 200,
+    "website": "http://www.hotsixteen.com",
+    "image": "../assets/images/hotel16.jpg",
+    "bookNow": "http://www.hotsixteen.com/book",
+    "countGuest": 50,
+    "totalGuest": 100,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Seventeen",
+    "rezension": {
+      "rating": 4.5,
+      "comment": "Luxurious experience with top-notch service."
+    },
+    "address": {
+      "street": "1414 Magnolia St",
+      "zip": 88888,
+      "city": "Bonn",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 8901234567,
+      "email": "contact@hotseventeen.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 180,
+    "website": "http://www.hotseventeen.com",
+    "image": "../assets/images/hotel17.jpg",
+    "bookNow": "http://www.hotseventeen.com/book",
+    "countGuest": 75,
+    "totalGuest": 200,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Eighteen",
+    "rezension": {
+      "rating": 4.0,
+      "comment": "Comfortable and well-located."
+    },
+    "address": {
+      "street": "1515 Sequoia St",
+      "zip": 99999,
+      "city": "Mannheim",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 9012345678,
+      "email": "contact@hoteighteen.com"
+    },
+    "hotelClass": "Standard",
+    "costPerNight": 150,
+    "website": "http://www.hoteighteen.com",
+    "image": "../assets/images/hotel18.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 70,
+    "totalGuest": 150,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Nineteen",
+    "rezension": {
+      "rating": 4.2,
+      "comment": "Comfortable rooms and great breakfast."
+    },
+    "address": {
+      "street": "321 Pine St",
+      "zip": 32109,
+      "city": "Kiel",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 3456789012,
+      "email": "contact@hotelnineteen.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 330,
+    "website": "http://www.hotelnineteen.com",
+    "image": "../assets/images/hotel19.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 135,
+    "totalGuest": 180,
+    "hasCarRentService": false,
+    "hasWifi": false,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Twenty",
+    "rezension": {
+      "rating": 4.1,
+      "comment": "Clean and modern rooms."
+    },
+    "address": {
+      "street": "654 Cedar St",
+      "zip": 21098,
+      "city": "Rostock",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 4567890123,
+      "email": "contact@hoteltwenty.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 340,
+    "website": "http://www.hoteltwenty.com",
+    "image": "../assets/images/hotel20.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 220,
+    "totalGuest": 250,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Twenty-One",
+    "rezension": {
+      "rating": 4.0,
+      "comment": "Great facilities and helpful staff."
+    },
+    "address": {
+      "street": "987 Spruce St",
+      "zip": 10987,
+      "city": "Wiesbaden",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 5678901234,
+      "email": "contact@hoteltwentyone.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 350,
+    "website": "http://www.hoteltwentyone.com",
+    "image": "../assets/images/hotel21.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 180,
+    "totalGuest": 210,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Twenty-Two",
+    "rezension": {
+      "rating": 4.5,
+      "comment": "Excellent service and beautiful rooms."
+    },
+    "address": {
+      "street": "321 Birch St",
+      "zip": 98765,
+      "city": "Magdeburg",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 6789012345,
+      "email": "contact@hoteltwentytwo.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 360,
+    "website": "http://www.hoteltwentytwo.com",
+    "image": "../assets/images/hotel22.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 120,
+    "totalGuest": 170,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Twenty-Three",
+    "rezension": {
+      "rating": 4.6,
+      "comment": "Lovely atmosphere and great service."
+    },
+    "address": {
+      "street": "654 Maple St",
+      "zip": 87654,
+      "city": "Freiburg",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 7890123456,
+      "email": "contact@hoteltwentythree.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 370,
+    "website": "http://www.hoteltwentythree.com",
+    "image": "../assets/images/hotel23.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 78,
+    "totalGuest": 120,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Twenty-Four",
+    "rezension": {
+      "rating": 4.7,
+      "comment": "Fantastic amenities and great location."
+    },
+    "address": {
+      "street": "987 Ash St",
+      "zip": 76543,
+      "city": "Regensburg",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 8901234567,
+      "email": "contact@hoteltwentyfour.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 380,
+    "website": "http://www.hoteltwentyfour.com",
+    "image": "../assets/images/hotel24.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest":150,
+    "totalGuest": 180,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Twenty-Five",
+    "rezension": {
+      "rating": 4.8,
+      "comment": "Excellent food and comfortable rooms."
+    },
+    "address": {
+      "street": "321 Chestnut St",
+      "zip": 65432,
+      "city": "Ulm",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 9012345678,
+      "email": "contact@hoteltwentyfive.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 390,
+    "website": "http://www.hoteltwentyfive.com",
+    "image": "../assets/images/hotel25.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 190,
+    "totalGuest": 230,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Twenty-Six",
+    "rezension": {
+      "rating": 4.9,
+      "comment": "Luxurious stay and fantastic staff."
+    },
+    "address": {
+      "street": "654 Willow St",
+      "zip": 54321,
+      "city": "Mainz",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 2345678901,
+      "email": "contact@hoteltwentysix.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 400,
+    "website": "http://www.hoteltwentysix.com",
+    "image": "../assets/images/hotel26.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 170,
+    "totalGuest": 190,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Twenty-Seven",
+    "rezension": {
+      "rating": 4.4,
+      "comment": "Great ambiance and comfortable stay."
+    },
+    "address": {
+      "street": "987 Palm St",
+      "zip": 43210,
+      "city": "Potsdam",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 3456789012,
+      "email": "contact@hoteltwentyseven.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 410,
+    "website": "http://www.hoteltwentyseven.com",
+    "image": "../assets/images/hotel27.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 80,
+    "totalGuest": 120,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Twenty-Eight",
+    "rezension": {
+      "rating": 4.3,
+      "comment": "Excellent location and clean rooms."
+    },
+    "address": {
+      "street": "321 Redwood St",
+      "zip": 32109,
+      "city": "Erfurt",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 4567890123,
+      "email": "contact@hoteltwentyeight.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 420,
+    "website": "http://www.hoteltwentyeight.com",
+    "image": "../assets/images/hotel28.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 123,
+    "totalGuest": 190,
+    "hasCarRentService": true,
+    "hasWifi": false,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Twenty-Nine",
+    "rezension": {
+      "rating": 4.2,
+      "comment": "Great service and modern facilities."
+    },
+    "address": {
+      "street": "654 Fir St",
+      "zip": 21098,
+      "city": "Saarbrücken",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 5678901234,
+      "email": "contact@hoteltwentynine.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 430,
+    "website": "http://www.hoteltwentynine.com",
+    "image": "../assets/images/hotel29.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 140,
+    "totalGuest": 240,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Thirty",
+    "rezension": {
+      "rating": 4.1,
+      "comment": "Comfortable stay and great amenities."
+    },
+    "address": {
+      "street": "789 Cedar St",
+      "zip": 98765,
+      "city": "Kassel",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 6789012345,
+      "email": "contact@hotelthirty.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 440,
+    "website": "http://www.hotelthirty.com",
+    "image": "../assets/images/hotel30.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 170,
+    "totalGuest": 280,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Thirty-One",
+    "rezension": {
+      "rating": 4.0,
+      "comment": "Friendly staff and clean facilities."
+    },
+    "address": {
+      "street": "123 Spruce St",
+      "zip": 87654,
+      "city": "Münster",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 7890123456,
+      "email": "contact@hotelthirtyone.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 450,
+    "website": "http://www.hotelthirtyone.com",
+    "image": "../assets/images/hotel31.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 270,
+    "totalGuest": 410,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Thirty-Two",
+    "rezension": {
+      "rating": 4.5,
+      "comment": "Nice rooms and great service."
+    },
+    "address": {
+      "street": "321 Birch St",
+      "zip": 76543,
+      "city": "Gelsenkirchen",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 8901234567,
+      "email": "contact@hotelthirtytwo.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 460,
+    "website": "http://www.hotelthirtytwo.com",
+    "image": "../assets/images/hotel32.jpg",
+    "bookNow": ""
+  },
+  {
+    "name": "Hotel Thirty-Three",
+    "rezension": {
+      "rating": 4.6,
+      "comment": "Excellent food and comfortable stay."
+    },
+    "address": {
+      "street": "654 Maple St",
+      "zip": 65432,
+      "city": "Aachen",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 9012345678,
+      "email": "contact@hotelthirtythree.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 470,
+    "website": "http://www.hotelthirtythree.com",
+    "image": "../assets/images/hotel33.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 270,
+    "totalGuest": 300,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Thirty-Four",
+    "rezension": {
+      "rating": 4.7,
+      "comment": "Great location and lovely rooms."
+    },
+    "address": {
+      "street": "987 Ash St",
+      "zip": 54321,
+      "city": "Wolfsburg",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 2345678901,
+      "email": "contact@hotelthirtyfour.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 480,
+    "website": "http://www.hotelthirtyfour.com",
+    "image": "../assets/images/hotel34.jpg",
+    "bookNow": ""
+  },
+  {
+    "name": "Hotel Thirty-Five",
+    "rezension": {
+      "rating": 4.8,
+      "comment": "Luxurious stay and fantastic food."
+    },
+    "address": {
+      "street": "321 Chestnut St",
+      "zip": 43210,
+      "city": "Heidelberg",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 3456789012,
+      "email": "contact@hotelthirtyfive.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 490,
+    "website": "http://www.hotelthirtyfive.com",
+    "image": "../assets/images/hotel35.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 120,
+    "totalGuest": 180,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Thirty-Six",
+    "rezension": {
+      "rating": 4.9,
+      "comment": "Excellent service and great ambiance."
+    },
+    "address": {
+      "street": "654 Willow St",
+      "zip": 32109,
+      "city": "Braunschweig",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 4567890123,
+      "email": "contact@hotelthirtysix.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 500,
+    "website": "http://www.hotelthirtysix.com",
+    "image": "../assets/images/hotel36.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 90,
+    "totalGuest": 190,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Thirty-Seven",
+    "rezension": {
+      "rating": 4.4,
+      "comment": "Comfortable rooms and good service."
+    },
+    "address": {
+      "street": "987 Palm St",
+      "zip": 21098,
+      "city": "Halle",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 5678901234,
+      "email": "contact@hotelthirtyseven.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 510,
+    "website": "http://www.hotelthirtyseven.com",
+    "image": "../assets/images/hotel37.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 110,
+    "totalGuest": 240,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Thirty-Eight",
+    "rezension": {
+      "rating": 4.3,
+      "comment": "Great value and excellent service."
+    },
+    "address": {
+      "street": "321 Birch St",
+      "zip": 98765,
+      "city": "Osnabrück",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 6789012345,
+      "email": "contact@hotelthirtyeight.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 520,
+    "website": "http://www.hotelthirtyeight.com",
+    "image": "../assets/images/hotel38.jpg",
+    "bookNow": ""
+  },
+  {
+    "name": "Hotel Thirty-Nine",
+    "rezension": {
+      "rating": 4.2,
+      "comment": "Clean rooms and friendly staff."
+    },
+    "address": {
+      "street": "654 Maple St",
+      "zip": 87654,
+      "city": "Jena",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 7890123456,
+      "email": "contact@hotelthirtynine.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 530,
+    "website": "http://www.hotelthirtynine.com",
+    "image": "../assets/images/hotel39.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 60,
+    "totalGuest": 135,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Forty",
+    "rezension": {
+      "rating": 4.1,
+      "comment": "Great service and comfortable stay."
+    },
+    "address": {
+      "street": "987 Ash St",
+      "zip": 76543,
+      "city": "Dortmund",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 8901234567,
+      "email": "contact@hotelforty.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 540,
+    "website": "http://www.hotelforty.com",
+    "image": "../assets/images/hotel40.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 110,
+    "totalGuest": 190,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Forty-One",
+    "rezension": {
+      "rating": 4.0,
+      "comment": "Nice location and good service."
+    },
+    "address": {
+      "street": "321 Chestnut St",
+      "zip": 65432,
+      "city": "Essen",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 9012345678,
+      "email": "contact@hotelfortyone.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 550,
+    "website": "http://www.hotelfortyone.com",
+    "image": "../assets/images/hotel41.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 125,
+    "totalGuest": 200,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Forty-Two",
+    "rezension": {
+      "rating": 4.5,
+      "comment": "Lovely rooms and friendly staff."
+    },
+    "address": {
+      "street": "654 Willow St",
+      "zip": 54321,
+      "city": "Hanover",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 2345678901,
+      "email": "contact@hotelfortytwo.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 560,
+    "website": "http://www.hotelfortytwo.com",
+    "image": "../assets/images/hotel42.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 100,
+    "totalGuest": 140,
+    "hasCarRentService": false,
+    "hasWifi": false,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Forty-Three",
+    "rezension": {
+      "rating": 4.6,
+      "comment": "Excellent amenities and great service."
+    },
+    "address": {
+      "street": "321 Birch St",
+      "zip": 43210,
+      "city": "Krefeld",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 3456789012,
+      "email": "contact@hotelfortythree.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 570,
+    "website": "http://www.hotelfortythree.com",
+    "image": "../assets/images/hotel43.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 160,
+    "totalGuest": 240,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Forty-Four",
+    "rezension": {
+      "rating": 4.7,
+      "comment": "Fantastic service and beautiful rooms."
+    },
+    "address": {
+      "street": "987 Maple St",
+      "zip": 98765,
+      "city": "Bielefeld",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 4567890123,
+      "email": "contact@hotelfortyfour.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 580,
+    "website": "http://www.hotelfortyfour.com",
+    "image": "../assets/images/hotel44.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 80,
+    "totalGuest": 120,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Forty-Five",
+    "rezension": {
+      "rating": 4.8,
+      "comment": "Luxurious stay and great ambiance."
+    },
+    "address": {
+      "street": "321 Chestnut St",
+      "zip": 87654,
+      "city": "Leverkusen",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 5678901234,
+      "email": "contact@hotelfortyfive.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 590,
+    "website": "http://www.hotelfortyfive.com",
+    "image": "../assets/images/hotel45.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 130,
+    "totalGuest": 230,
+    "hasCarRentService": false,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Forty-Six",
+    "rezension": {
+      "rating": 4.9,
+      "comment": "Wonderful rooms and excellent service."
+    },
+    "address": {
+      "street": "987 Ash St",
+      "zip": 76543,
+      "city": "Leipzig",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 6789012345,
+      "email": "contact@hotelfortysix.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 600,
+    "website": "http://www.hotelfortysix.com",
+    "image": "../assets/images/hotel46.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 65,
+    "totalGuest": 140,
+    "hasCarRentService": true,
+    "hasWifi": false,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Forty-Seven",
+    "rezension": {
+      "rating": 4.4,
+      "comment": "Comfortable stay and great food."
+    },
+    "address": {
+      "street": "321 Spruce St",
+      "zip": 54321,
+      "city": "Duisburg",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 7890123456,
+      "email": "contact@hotelfortyseven.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 610,
+    "website": "http://www.hotelfortyseven.com",
+    "image": "../assets/images/hotel47.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 110,
+    "totalGuest": 190,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  },
+  {
+    "name": "Hotel Forty-Eight",
+    "rezension": {
+      "rating": 4.3,
+      "comment": "Good location and nice rooms."
+    },
+    "address": {
+      "street": "987 Palm St",
+      "zip": 43210,
+      "city": "Lübeck",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 8901234567,
+      "email": "contact@hotelfortyeight.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 620,
+    "website": "http://www.hotelfortyeight.com",
+    "image": "../assets/images/hotel48.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 170,
+    "totalGuest": 250,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Forty-Nine",
+    "rezension": {
+      "rating": 4.2,
+      "comment": "Nice ambiance and comfortable stay."
+    },
+    "address": {
+      "street": "321 Chestnut St",
+      "zip": 21098,
+      "city": "Oberhausen",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 9012345678,
+      "email": "contact@hotelfortynine.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 630,
+    "website": "http://www.hotelfortynine.com",
+    "image": "../assets/images/hotel49.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 69,
+    "totalGuest": 200,
+    "hasCarRentService": true,
+    "hasWifi": true,
+    "hasResturant": true,
+    "haSwimpool": false,
+    "hasGym": false
+  },
+  {
+    "name": "Hotel Fifty",
+    "rezension": {
+      "rating": 4.1,
+      "comment": "Great service and good facilities."
+    },
+    "address": {
+      "street": "987 Ash St",
+      "zip": 98765,
+      "city": "Heilbronn",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": 2345678901,
+      "email": "contact@hotelfifty.com"
+    },
+    "hotelClass": "Deluxe",
+    "costPerNight": 640,
+    "website": "http://www.hotelfifty.com",
+    "image": "../assets/images/hotel50.jpg",
+    "bookNow": "http://www.hoteighteen.com/book",
+    "countGuest": 80,
+    "totalGuest": 190,
+    "hasCarRentService": true,
+    "hasWifi": false,
+    "hasResturant": true,
+    "haSwimpool": true,
+    "hasGym": true
+  }
+
+
+
+
+
+]
