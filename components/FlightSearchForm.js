@@ -3,7 +3,7 @@
 import { useTranslation } from "next-i18next";
 import { useState } from "react";
 import Link from "next/link";
-import { LiaPlaneDepartureSolid, LiaPlaneArrivalSolid } from "react-icons/lia";
+
 
 const FlightSearchForm = () => {
   // const [tripType, setTripType] = useState("return"); // State for trip type (return or one-way)
@@ -64,6 +64,7 @@ const FlightSearchForm = () => {
   };
 
   return (
+    
     <div
       className="inset-0 z-0 bg-cover bg-center h-full w-full py-4 px-4"
       style={{ backgroundImage: "url('/background1.gif')" }}
@@ -73,11 +74,11 @@ const FlightSearchForm = () => {
         <h2 className=" text-4xl font-semibold mb-6 text-primary text-center sm:text-4xl ">
           {/* Plane Icon */}
           <div className="absolute top-8  left-1/4 text-primary">
-            <LiaPlaneDepartureSolid size="1em" />
+            
           </div>
           {t("form")}
           <div className="absolute top-8  right-1/4 text-primary">
-            <LiaPlaneArrivalSolid size="1em" />
+           
           </div>
         </h2>
 

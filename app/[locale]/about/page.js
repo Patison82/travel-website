@@ -13,6 +13,7 @@ const stats = [
 
 export default function AboutUs() {
   // const { t } = useTranslation();
+  
   return (
     <div
       className="bg-gray-100 p-8"
