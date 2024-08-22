@@ -1,9 +1,6 @@
 
 'use client'
 import Link from "next/link";
-import { useEffect,useState } from "react";
-
-
 
 const stats = [
   { id: 1, name: "Experience", value: "13 years" },
@@ -14,12 +11,6 @@ const stats = [
   { id: 6, name: "New clients annually", value: "46,000" },
 ];
 
- 
- 
-
- 
-
-  
 
 export default function AboutUs() {
   // const { t } = useTranslation();
@@ -33,7 +24,7 @@ export default function AboutUs() {
           rgba(255, 255, 255, 0.8), 
           rgba(255, 255, 255, 0.8)
         ), 
-        url('/path/to/your/background-image.jpg')`,
+        url('')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
