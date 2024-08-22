@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <RecoilRoot>
         
       <html lang="en">
-        <body className={`${inter.className} bg-primary`}
+        <body className={`${inter.className} `}
 suppressHydrationWarning={true}>
           <Header />
           <main>{children}</main>

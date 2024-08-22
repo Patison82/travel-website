@@ -26,11 +26,14 @@ const Header = () => {
           <div className="flex-1">
             <Link href="/">
               <Image
-                className="rounded"
+                className="rounded "
                 src="/pavasa.png"
                 alt="Logo"
                 width={75}
                 height={50}
+                style={{ width: 'auto', height: 'auto' }}
+                priority
+
               />
             </Link>
           </div>

@@ -17,3 +17,7 @@ export const cartState = atom({
       checkoutRedirect: false,
     },
   });
+  export const favoriteState = atom({
+    key: 'favoriteState',
+    default: [],
+  });
