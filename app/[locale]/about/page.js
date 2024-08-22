@@ -2,9 +2,6 @@
 'use client'
 import Link from "next/link";
 
-
-
-
 const stats = [
   { id: 1, name: "Experience", value: "13 years" },
   { id: 2, name: "Destination", value: "123" },
@@ -14,12 +11,6 @@ const stats = [
   { id: 6, name: "New clients annually", value: "46,000" },
 ];
 
- 
- 
-
- 
-
-  
 
 export default function AboutUs() {
   // const { t } = useTranslation();
