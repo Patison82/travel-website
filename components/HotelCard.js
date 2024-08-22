@@ -89,6 +89,8 @@ const HotelCard = ({ hotel }) => {
                 alt={hotel.name}
                 width={350}
                 height={200}
+                style={{ width: 'auto', height: 'auto' }}
+                priority
             />
             <div>
                 <h2>{hotel.name}</h2>
