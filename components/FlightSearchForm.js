@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 
+
 const FlightSearchForm = () => {
   // const [tripType, setTripType] = useState("return"); // State for trip type (return or one-way)
   // const [addNearbyFrom, setAddNearbyFrom] = useState(false); // State for "Add nearby airports" checkbox for departure city
@@ -12,6 +13,7 @@ const FlightSearchForm = () => {
   // const [directFlightsOnly, setDirectFlightsOnly] = useState(false);
 
   const { t } = useTranslation();
+
 
   const objData = {
     flightType: "",
@@ -36,7 +38,7 @@ const FlightSearchForm = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     console.log(formSearchData);
 
@@ -267,7 +269,7 @@ const FlightSearchForm = () => {
           <div className="flex justify-end mt-6 relative">
             <Link href="/flights">
               <button className="px-6 py-3 text-l bg-primary text-  font-semibold rounded-lg  hover:bg-tertiary transition duration-300 shadow-lg ">
-                {t("form_searchflights")}
+                {t("form_seachflights")}
               </button>
             </Link>
           </div>

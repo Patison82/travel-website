@@ -146,8 +146,12 @@ const flights = [
   },
 ];
 
+
+
+
 //filter
-function FlightsPage() {
+ async function FlightsPage() {
+ 
 
   const [flights, setFlights] = useState([]);
   const searchParams = useSearchParams();
@@ -167,6 +171,8 @@ function FlightsPage() {
   }, [countryFrom, countryTo]);
 
   console.log(flights);
+
+ 
 
   const [selectedBaggage, setSelectedBaggage] = useState('All');
   const [selectedStops, setSelectedStops] = useState('All');
@@ -240,6 +246,9 @@ function FlightsPage() {
 
     setFilteredFlights(sorted);
   }, [selectedBaggage, selectedStops, selectedAirlines, maxTravelTime, departureTime, sortCriteria]);
+
+
+ 
 
   return (
     <div className="bg-white p-4 mt-36">
