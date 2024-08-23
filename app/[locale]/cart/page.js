@@ -2,8 +2,8 @@
 "use client";
 import axios from "axios";
 import { useRecoilState } from 'recoil';
-import { cartState, subtotalState } from '../../atoms/cartState';
-import CartList from '../../components/CartList';
+import { cartState, subtotalState } from '../../../atoms/cartState';
+import CartList from '../../../components/CartList';
 import { useEffect } from 'react';
 import { useAuth } from '@clerk/nextjs'; // Clerk Authentifizierungs-Hook
 import { useRouter } from "next/navigation" // Importiere die richtige Funktion

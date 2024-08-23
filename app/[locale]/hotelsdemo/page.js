@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
-import HotelCard from '../../components/HotelCard';
-import { subtotalState } from '../../atoms/cartState';
+import HotelCard from '../../../components/HotelCard';
+import { subtotalState } from '../../../atoms/cartState';
 const Hotels = () => {
   const [cart, setCart] = useState([]);
 
