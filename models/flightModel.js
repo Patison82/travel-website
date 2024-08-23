@@ -22,6 +22,7 @@ const flightSchema = new mongoose.Schema(
       type: String,
       required: true,
       enum: ["economy", "business", "first"],
+      default:'economy'
     },
 
     cityFrom: { type: String },

@@ -6,10 +6,6 @@ import Link from "next/link";
 
 
 const FlightSearchForm = () => {
-  // const [tripType, setTripType] = useState("return"); // State for trip type (return or one-way)
-  // const [addNearbyFrom, setAddNearbyFrom] = useState(false); // State for "Add nearby airports" checkbox for departure city
-  // const [addNearbyTo, setAddNearbyTo] = useState(false); // State for "Add nearby airports" checkbox for destination city
-  // const [directFlightsOnly, setDirectFlightsOnly] = useState(false);
 
   const { t } = useTranslation();
 
@@ -39,7 +35,7 @@ const FlightSearchForm = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log(formSearchData);
+    
 
     const filteredData = Object.fromEntries(
       Object.entries(formSearchData).filter(
@@ -49,9 +45,9 @@ const FlightSearchForm = () => {
           (typeof value === "number" && value !== 0)
       )
     );
-
+// console.log('filtereddata',filteredData);
     const queryParams = new URLSearchParams(filteredData).toString();
-    console.log(queryParams);
+    // console.log('geschikte query',queryParams);
     try {
       const response = await fetch(`/api/flights?${queryParams}`);
       if (!response.ok) {
