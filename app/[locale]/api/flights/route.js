@@ -78,9 +78,9 @@ export async function GET(req) {
     };
   }
 
-  if (queryParams.passenger) {
-    filter.passenger = queryParams.passenger;
-  }
+  // if (queryParams.passenger) {
+  //   filter.passenger = queryParams.passenger;
+  // }
 
   // console.log("Final Filter Object:", JSON.stringify(filter, null, 2));
   try {
