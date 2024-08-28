@@ -8,7 +8,7 @@ import HotelSection from "@/components/HotelSection";
 export default function Home() {
   return (
     <>
-      <main>
+      <main className="bg-primary">
         <Parallax />
         <FlightSearchForm />
         <Carousel />

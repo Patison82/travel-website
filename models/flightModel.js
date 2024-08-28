@@ -2,38 +2,46 @@ import mongoose from "mongoose";
 
 const flightSchema = new mongoose.Schema(
   {
-    airlineName: { type: String, required: true },
-    countryFrom: { type: String },
-    countryTo: { type: String },
-    flightNummer: { type: String, required: true },
-    flightType: { type: String, required: true, enum: ["RETURN", "ONE-WAY"] },
-    from: { type: String, required: true },
-    to: { type: String, required: true },
+    // flightTypeReturn: { type: Boolean, default: true },
+    // flightTypeOneWay: { type: Boolean, default: false },
+
+    flightType: { type: String, enum: ["return", "one-way"] },
+
+    countryFrom: { type: String, required: true },
+    countryTo: { type: String, required: true },
+
+    hindatum: { type: Date },
+    zurueckFlugDatum: { teype: Date },
+
+    nearbyAirportFrom: { type: Boolean, default: false },
+    nearbyAirportTo: { type: Boolean, default: false },
+    directFlightOnly: { type: Boolean, default: false },
+
+    passenger: { type: Number, min: 1, max: 100 },
     travelClass: {
       type: String,
       required: true,
-      enum: ["Economy", "Business", "First"],
+      enum: ["economy", "business", "first"],
+      default:'economy'
     },
-    depart: {
-      airport: { type: String },
-      time: { type: Date },
-    },
-    return: {
-      airport: { type: String },
-      time: { type: Date },
-    },
-    price: { type: Number, required: true },
+
+    cityFrom: { type: String },
+    cityTo: { type: String },
+    airlineName: { type: String },
+    flightNummer: { type: String },
+    price: { type: Number },
     priceType: {
       type: String,
       required: true,
       enum: ["adult", "child", "special"],
     },
-    directFlightOnly: { type: Boolean, default: false },
-    addNearbyAirline: { type: Boolean, default: false },
-    countPassenger: { type: Number, required: true, min: 1 , max:100 },
+
+    departAirport: String,
+    returnAirport: String,
+
     totalPassenger: { type: Number, required: true, default: 100 },
-    flightDurationDepart:{type:Number},
-    flightDurationReturn:{type:Number}
+    flightDurationDepart: { type: Number },
+    flightDurationReturn: { type: Number },
   },
   { timestamps: true }
 );
