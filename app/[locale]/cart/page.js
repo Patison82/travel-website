@@ -12,6 +12,7 @@ import { FaCcVisa } from "react-icons/fa";
 import { FaCcPaypal } from "react-icons/fa";
 import { FaGooglePay } from "react-icons/fa";
 import { FaApplePay } from "react-icons/fa";
+import { RiErrorWarningLine } from "react-icons/ri";
 import Link from "next/link";
 const Cart = () => {
   const { userId } = useAuth(); // Clerk Authentifizierungs-Daten
@@ -48,7 +49,7 @@ const Cart = () => {
   };
 
   return (
-    <div className='flex items-center justify-center mx-auto min-h-screen py-16 sm:py-44 px-4 sm:px-6 lg:px-8 flex-col sm:flex-row border-gray-800'>
+    <div className='flex items-center justify-center mx-auto min-h-screen py-16 sm:py-44 px-4 sm:px-6 lg:px-8 flex-col sm:flex-row '>
           <div className="w-full max-w-md mt-8 " >
             {cartItem.length <= 0
               ? (
@@ -62,8 +63,23 @@ const Cart = () => {
                 
                 </>
               ) : (
+                
                 cartItem.map(item => <CartList className="w-full mt-8" key={item.id} data={item} />)
               )}
+              <div className="m-6 pr-3">
+                  <div className="text-[9px] flex gap-1">
+                  <RiErrorWarningLine className="h-3 w-3" />
+                  <p>Items placed in this bag are not reserved.</p> 
+                  </div>
+                  <div className="text-[9px] flex gap-1">
+                  <RiErrorWarningLine  className="h-3 w-3" />
+                  <p>Pricing: Originally refers to the price the item was first listed at.</p>
+                  </div>
+                  <div className="text-[9px] flex gap-1">
+                  <RiErrorWarningLine  className="h-3 w-3"/>
+                  <p>Wenn Du die Darstellung in deutscher Sprache bevorzugst, wähle bitte die deutsche Sprachoption (DE") oben in der Navigation.</p>
+                  </div>
+              </div>
             </div>
             {cartItem.length > 0 && (
               

@@ -23,7 +23,9 @@ const CartList = ({ data }) => {
   return (
     <div className="flex justify-start w-full sm:px-6 lg:px-8 ">
       <div className=" flex items-center justify-center rounded-xl flex-row  ">
-          <div className="w-24 h-24 sm:w-25 sm:h-25 md:w-40 md:h-40 lg:w-48 lg:h-48 flex items-center justify-center ">
+      
+          <div className="w-24 h-24 sm:w-14 sm:h-14 md:w-40 md:h-40 lg:w-48 lg:h-48 flex items-center justify-center ">
+
             <Image
               className="rounded-md "
               src={image}
@@ -34,10 +36,10 @@ const CartList = ({ data }) => {
               priority
             />
           </div>
-        <div className="ml-2 ">
-            <div className="sm:font-bold text-xs md:text-lg sm:text-[12px]  ">{name}</div>
+        <div className="ml-2 flex justify-center items-center  gap-2">
+            <div className="sm:font-bold text-xs md:text-lg sm:text-[10px]  ">{name}</div>
             <div className="text-xs sm:text-[10px] ">Qty: {Quantity}</div>
-            <div className=" text-xs md:text-sm sm:font-bold sm:mt-1 sm:text-[10px]">
+            <div className=" text-xs md:text-sm sm:font-bold sm:text-[10px]">
               {price * Quantity}$
             </div>
             <button onClick={handleRemove} >
