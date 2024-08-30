@@ -20,4 +20,4 @@ The project includes:
 - Chat Bot
 
 
-![start page ] (./public/git.gif)
+![start page ](./public/gif.gif)
