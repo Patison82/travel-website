@@ -18,4 +18,6 @@ The project includes:
 - Chat Bot
 
 
-![start page ] (../public/gif.gif)
+
+![start page ](./public/gif.gif)
+
