@@ -1,4 +1,4 @@
-# PAVASA TRAVEL_SERVICE Final-Project
+# PAVASA Travel Final-Project
 
 The 'PAVASA' Final Project  is a project by DCI students :computer:, namely: 
 - Ali Hossaini [Link](https://github.com/Hossaini1)
@@ -9,15 +9,13 @@ The 'PAVASA' Final Project  is a project by DCI students :computer:, namely:
 - Andreas Stroianetki [Link](https://github.com/Sandreass)
 
 The project includes:
-- Hotel Page 
-- Flight Page 
+- Hotel & Flight Page 
 - Cart
 - Payment Page
-- Flight Search
-- Hotel Search
+- Flight & Hotel Search
 - Sign In/Sign Up
-- News Page
+- News , About & Contact  Page
 - Chat Bot
 
 
-![start page ] (./public/git.gif)
+![start page ] (../public/gif.gif)
